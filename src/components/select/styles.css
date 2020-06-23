@@ -1,0 +1,29 @@
+.app__select {
+  width: 227px;
+  @apply relative flex;
+  @apply border border-gray-5;
+  @apply appearance-none;
+  @apply transition duration-200;
+}
+.app__select:hover {
+  @apply border-gray-1 bg-gray-6;
+  @apply transition duration-200;
+}
+.app__select:focus-within {
+  @apply border-gray-1 bg-gray-6;
+  @apply transition duration-200;
+}
+.select__element {
+  height: 26px;
+  z-index: 2;
+  @apply pl-1 w-full;
+  @apply bg-transparent;
+  @apply appearance-none;
+}
+.select__icon {
+  height: 26px;
+  z-index: 1;
+  @apply absolute right-0;
+  @apply flex items-center;
+  @apply border-l border-gray-5;
+}

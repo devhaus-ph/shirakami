@@ -1,0 +1,9 @@
+.app__field {
+  @apply mb-4;
+}
+.field__label {
+  @apply text-gray-1 mb-1;
+}
+.field__message {
+  @apply mt-1;
+}

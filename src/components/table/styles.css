@@ -1,0 +1,40 @@
+.app__table {
+  @apply w-full;
+}
+
+.table__header {
+  @apply border-b border-gray-3;
+  @apply text-gray-3 text-left;
+}
+
+.table__headercell {
+  @apply px-4 font-light;
+}
+
+.table__headercell:first-child {
+  @apply pl-4;
+}
+
+.table__headercell:last-child {
+  @apply pr-4;
+}
+
+.table__row {
+  @apply h-8 px-4;
+}
+
+.table__row:nth-child(even) {
+  @apply bg-gray-6;
+}
+
+.table__cell {
+  @apply px-4 capitalize;
+}
+
+.table__cell:first-child {
+  @apply pl-4;
+}
+
+.table__cell:last-child {
+  @apply pr-4;
+}

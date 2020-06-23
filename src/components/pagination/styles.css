@@ -1,0 +1,17 @@
+.app__pagination {
+  @apply flex my-10;
+}
+
+.pagination__item {
+  @apply mr-8 px-2 rounded-sm;
+  @apply select-none cursor-pointer;
+}
+
+.pagination__item--active {
+  @apply mr-8 px-2 bg-gray-5 rounded-sm;
+  @apply select-none cursor-pointer;
+}
+
+.pagination__ellipsis {
+  @apply mr-8 px-2 select-none;
+}

@@ -1,0 +1,75 @@
+.app__checkbox {
+  width: 227px;
+  @apply block relative;
+  @apply pl-10 mb-4 h-5;
+  @apply select-none cursor-pointer;
+}
+
+.checkbox__label {
+  @apply pt-1 text-gray-3;
+  @apply text-base align-middle;
+}
+
+.app__checkbox .checkbox__input {
+  @apply absolute opacity-0;
+  @apply h-0 w-0;
+}
+
+.checkbox__mark {
+  @apply absolute top-0 left-0;
+  @apply h-5 w-5 bg-white;
+  @apply border border-gray-5;
+  @apply transition duration-200;
+}
+
+/* Hovering checkbox__input */
+.app__checkbox:hover .checkbox__input ~ .checkbox__mark {
+  @apply border-gray-1 bg-gray-6;
+  @apply transition duration-200;
+}
+
+.app__checkbox:hover .checkbox__input ~ .checkbox__label {
+  @apply text-gray-1;
+  @apply transition duration-200;
+}
+
+/* Focusing checkbox__input */
+.app__checkbox .checkbox__input:focus ~ .checkbox__mark {
+  @apply border-gray-1 bg-gray-6;
+  @apply transition duration-200;
+}
+
+.app__checkbox .checkbox__input:focus ~ .checkbox__label {
+  @apply text-gray-1;
+  @apply transition duration-200;
+}
+
+/* Input checked */
+.app__checkbox .checkbox__input:checked ~ .checkbox__mark {
+  @apply bg-white;
+}
+
+.app__checkbox .checkbox__input:checked ~ .checkbox__label {
+  @apply text-gray-1;
+}
+
+.checkbox__mark:after {
+  content: '';
+  @apply absolute hidden;
+}
+
+.app__checkbox .checkbox__input:checked ~ .checkbox__mark:after {
+  @apply block;
+}
+
+/* Input marker */
+.app__checkbox .checkbox__mark:after {
+  left: 0.3rem;
+  top: 0.1rem;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  @apply border-gray-1;
+  @apply w-2 h-3;
+}

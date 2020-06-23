@@ -1,0 +1,25 @@
+/* purgecss start ignore */
+@tailwind base;
+
+h1 {
+  @apply text-2xl leading-6;
+}
+h2 {
+  @apply text-xl leading-5;
+}
+p {
+  @apply text-base leading-4;
+}
+label {
+  @apply text-xs leading-3 block;
+}
+
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+html {
+  @apply text-gray-1;
+  font-family: 'Oxygen', 'sans-serif';
+}

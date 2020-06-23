@@ -1,0 +1,15 @@
+.app__section {
+  @apply mb-16;
+}
+
+.section__title {
+  @apply mb-4;
+}
+
+.section__field {
+  @apply mb-4;
+}
+
+.section__label {
+  @apply mb-1 text-gray-3;
+}

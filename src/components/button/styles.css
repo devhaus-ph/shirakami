@@ -1,0 +1,96 @@
+.app__button {
+  @apply relative inline-block;
+  @apply px-6 py-1;
+  @apply text-xs;
+  @apply cursor-pointer;
+  @apply transition duration-200;
+}
+
+.app__button:after {
+  content: '';
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply bg-gray-6 opacity-0;
+  @apply transition-all duration-200;
+}
+
+.app__button:active:after {
+  @apply bg-gray-6 opacity-50;
+}
+
+.app__button.button--solid {
+  @apply border border-gray-1;
+  @apply bg-gray-1 text-gray-6;
+}
+
+.app__button.button--solid:hover {
+  @apply border-gray-2 bg-gray-2;
+}
+
+.app__button.button--solid:focus {
+  @apply border-gray-2 bg-gray-2;
+}
+
+.app__button.button--outline {
+  @apply border border-gray-1;
+  @apply text-gray-1;
+}
+
+.app__button.button--outline:hover {
+  @apply bg-gray-1 text-gray-6;
+}
+
+.app__button.button--outline:focus {
+  @apply bg-gray-1 text-gray-6;
+}
+
+.app__button.button--text {
+  @apply border-0;
+  @apply text-gray-1 bg-white;
+  @apply appearance-none;
+}
+
+.app__button.button--text:hover {
+  @apply border-0 bg-gray-6;
+}
+
+.app__button.button--text:focus {
+  @apply border-0 bg-gray-6;
+}
+
+.app__button.button--text:after {
+  content: '';
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply bg-gray-1 opacity-0;
+  @apply transition-all duration-200;
+}
+
+.app__button.button--text:active:after {
+  @apply bg-gray-1 opacity-50;
+}
+
+.app__button.button--icon {
+  @apply m-0 p-1;
+  @apply border-0 rounded-sm;
+}
+
+.app__button.button--icon:hover {
+  @apply bg-gray-5;
+}
+
+.app__button.button--icon:focus {
+  @apply bg-gray-5;
+}
+
+.app__button.button--icon:after {
+  content: '';
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply bg-gray-1 opacity-0;
+  @apply transition-all duration-200;
+}
+
+.app__button.button--icon:active:after {
+  @apply bg-gray-1 opacity-50;
+}

@@ -1,0 +1,21 @@
+.app__form {
+  @apply mb-20;
+}
+.form__title {
+  @apply mb-1;
+}
+.form__description {
+  @apply text-gray-3;
+}
+.form__section {
+  @apply my-16;
+}
+.form__footer {
+  @apply mb-16;
+}
+.form__footer > * {
+  @apply mr-8;
+}
+.form__legend {
+  @apply mb-4;
+}

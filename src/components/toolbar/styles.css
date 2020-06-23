@@ -1,0 +1,7 @@
+.app__toolbar {
+  @apply py-10;
+}
+
+.app__toolbar > button.app__button {
+  @apply mr-10;
+}
