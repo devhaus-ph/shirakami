@@ -1,6 +1,6 @@
 {
   "name": "shirakami-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React UI Kit by DevHaus",
   "main": "dist/shirakami.js",
   "module": "dist/uwu.esm.js",
