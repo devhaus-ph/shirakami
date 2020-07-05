@@ -1,8 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Download(props) {
   return (
     <svg
+      className={props.className}
       width={props.width}
       height={props.height}
       viewBox="0 0 24 24"
@@ -30,6 +32,10 @@ function Download(props) {
       />
     </svg>
   )
+}
+
+Download.propTypes = {
+  className: PropTypes.string,
 }
 
 export default Download

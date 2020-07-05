@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.content.row {
+  flex-direction: row;
+}
+
+.content.column {
+  flex-direction: column;
+}
+
+.content.full {
+  width: 100%;
+}

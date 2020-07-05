@@ -1,24 +1,40 @@
-.app__modal {
+.modal {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  opacity: 0;
   z-index: -1;
-  @apply fixed flex justify-center top-0 left-0;
-  @apply w-full h-full;
-  @apply bg-white opacity-0;
 }
 
-.modal--active {
+.modal-active {
   background-color: rgba(255, 255, 255, 0.95);
-  @apply transition duration-200 opacity-100 z-50;
+  transition: all 200ms;
+  opacity: 100;
+  z-index: 50;
 }
 
-.modal__container {
-  @apply relative flex justify-center;
-  @apply mx-auto mt-8 pt-8;
+.modal-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
 }
 
-.modal__container > * {
-  @apply mx-4;
+.modal-container > * {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.modal__close-button {
-  @apply absolute top-0 right-0;
+.modal-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

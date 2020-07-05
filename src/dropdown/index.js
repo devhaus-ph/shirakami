@@ -1,18 +1,21 @@
 import './styles.css'
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Button from './../button'
-import Icon from './../icon'
+import { Button } from './../'
 
-const VISIBLE = 'dropdown__menu--active'
+const VISIBLE = 'dropdown-menu-active'
 
 function Dropdown(props) {
   const refToggleButton = useRef()
+
+  // List of CSS class in object styleName.
   const [styleName, setStyleName] = useState({
-    dropdownMenu: 'dropdown__menu',
+    dropdownMenu: 'dropdown-menu',
     status: '',
   })
 
+  // Adds an event that closes the component.
+  // Remove the event if the component was destroyed.
   useEffect(() => {
     document.body.addEventListener('click', handleClickOutside)
     return () => document.body.removeEventListener('click', handleClickOutside)
@@ -38,33 +41,50 @@ function Dropdown(props) {
   styleName.values = () => Object.values(styleName).join(' ')
 
   return (
-    <div className="app__dropdown">
+    <div className="dropdown">
       <div
-        className="dropdown__toggle"
+        className="dropdown-toggle"
         ref={refToggleButton}
         onClick={toggleDropdownMenu}>
-        <Button design="icon">
-          <Icon icon={props.toggleIcon} width={18} height={18} />
-        </Button>
+        <Button variant="icon" icon={props.icon} iconSize={props.iconSize} />
       </div>
-      <ul className={styleName.values()}>{props.children}</ul>
+      <div className={styleName.values()}>{props.children}</div>
     </div>
   )
 }
 
+Dropdown.Menu = (props) => <dl>{props.children}</dl>
+
 Dropdown.Item = (props) => (
-  <li className="dropdown__item" onClick={props.onClick}>
-    <label>{props.children}</label>
-  </li>
+  <dt className="dropdown-item" onClick={props.onClick}>
+    {props.children}
+  </dt>
 )
 
+/*---------------
+    PropTypes
+---------------*/
 Dropdown.propTypes = {
+  children: PropTypes.node,
+  icon: PropTypes.string,
+  iconSize: PropTypes.number,
+}
+
+Dropdown.Menu.propTypes = {
   children: PropTypes.node,
 }
 
 Dropdown.Item.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
+}
+
+/*-------------------
+    Default Props
+-------------------*/
+Dropdown.defaultProps = {
+  icon: 'more',
+  iconSize: 18,
 }
 
 export default Dropdown

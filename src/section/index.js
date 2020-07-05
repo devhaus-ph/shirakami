@@ -3,19 +3,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Section(props) {
-  const styleName = ['app__section', props.className].join(' ')
+  const styleName = ['section', props.className].join(' ')
 
   return (
     <div className={styleName}>
-      <h2 className="section__title">{props.title}</h2>
+      <h2 className="section-title">{props.title}</h2>
       {props.children}
     </div>
   )
 }
 
 Section.Field = (props) => (
-  <div className="section__field">
-    <label className="section__label">{props.label}</label>
+  <div className="section-field">
+    <label className="section-label">{props.label}</label>
     {props.children}
   </div>
 )

@@ -3,12 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Modal(props) {
-  const displayStatus = () => (props.display ? 'modal--active' : '')
-  const styleName = ['app__modal', displayStatus()].join(' ')
+  const displayStatus = () => (props.display ? 'modal-active' : '')
+  const styleName = ['modal', displayStatus()].join(' ')
 
   return (
     <div className={styleName}>
-      <div className="container modal__container">
+      <div className="container modal-container">
         <Modal.Toggle />
         {props.children}
       </div>
@@ -17,7 +17,7 @@ function Modal(props) {
 }
 
 Modal.Toggle = (props) => (
-  <div className="modal__close-button" onClick={props.onClick}>
+  <div className="modal-close-button" onClick={props.onClick}>
     {props.children}
   </div>
 )

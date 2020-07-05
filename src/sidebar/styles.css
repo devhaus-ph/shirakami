@@ -1,0 +1,27 @@
+.sidebar {
+  width: 275px;
+}
+
+.sidebar-menu {
+  margin-top: 0;
+}
+
+.sidebar-label {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--grey);
+}
+
+.sidebar-item {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.sidebar-item:hover {
+  background-color: var(--grey-tint-3);
+  transition: all 200ms;
+}

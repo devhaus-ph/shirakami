@@ -1,9 +1,17 @@
-.app__field {
-  @apply mb-4;
+.field {
+  margin-bottom: 0.75rem;
 }
-.field__label {
-  @apply text-gray-1 mb-1;
+
+.field-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: var(--grey-shade-2);
 }
-.field__message {
-  @apply mt-1;
+
+.field-message {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--red);
 }

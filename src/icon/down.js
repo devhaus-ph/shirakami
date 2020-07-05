@@ -1,8 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Down(props) {
   return (
     <svg
+      className={props.className}
       width={props.width}
       height={props.height}
       viewBox="0 0 24 24"
@@ -17,4 +19,9 @@ function Down(props) {
     </svg>
   )
 }
+
+Down.propTypes = {
+  className: PropTypes.string,
+}
+
 export default Down
