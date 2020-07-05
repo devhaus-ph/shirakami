@@ -1,17 +1,28 @@
-.app__pagination {
-  @apply flex my-10;
+.pagination {
+  display: flex;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.pagination__item {
-  @apply mr-8 px-2 rounded-sm;
-  @apply select-none cursor-pointer;
+.pagination-item {
+  padding: 0.5rem;
+  margin-right: 2rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  user-select: none;
 }
 
-.pagination__item--active {
-  @apply mr-8 px-2 bg-gray-5 rounded-sm;
-  @apply select-none cursor-pointer;
+.pagination-item-active {
+  margin-right: 2rem;
+  padding: 0.5rem;
+  background-color: var(--light);
+  border-radius: 0.125rem;
+  cursor: pointer;
+  user-select: none;
 }
 
-.pagination__ellipsis {
-  @apply mr-8 px-2 select-none;
+.pagination-ellipsis {
+  margin-right: 2rem;
+  padding: 0.5rem;
+  user-select: none;
 }

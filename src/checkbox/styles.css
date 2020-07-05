@@ -1,75 +1,96 @@
-.app__checkbox {
+/*--------------
+    Checkbox
+--------------*/
+.checkbox {
+  display: block;
+  position: relative;
   width: 227px;
-  @apply block relative;
-  @apply pl-10 mb-4 h-5;
-  @apply select-none cursor-pointer;
+  height: 1.25rem;
+  padding-left: 2.5rem;
+  user-select: none;
+  cursor: pointer;
 }
 
-.checkbox__label {
-  @apply pt-1 text-gray-3;
-  @apply text-base align-middle;
+.checkbox-label {
+  font-size: 1rem;
+  color: var(--grey-shade-3);
+  vertical-align: center;
 }
 
-.app__checkbox .checkbox__input {
-  @apply absolute opacity-0;
-  @apply h-0 w-0;
+.checkbox .checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.checkbox__mark {
-  @apply absolute top-0 left-0;
-  @apply h-5 w-5 bg-white;
-  @apply border border-gray-5;
-  @apply transition duration-200;
+.checkbox-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--grey);
+  background-color: var(--white);
+  transition: all 200ms;
 }
 
-/* Hovering checkbox__input */
-.app__checkbox:hover .checkbox__input ~ .checkbox__mark {
-  @apply border-gray-1 bg-gray-6;
-  @apply transition duration-200;
+/*-----------
+    Hover
+-----------*/
+.checkbox:hover .checkbox-input ~ .checkbox-mark {
+  border: 1px solid var(--grey-shade-3);
+  background-color: var(--grey-tint-3);
+  transition: all 200ms;
 }
 
-.app__checkbox:hover .checkbox__input ~ .checkbox__label {
-  @apply text-gray-1;
-  @apply transition duration-200;
+.checkbox:hover .checkbox-input ~ .checkbox-label {
+  color: var(--grey-shade-3);
+  transition: all 200ms;
 }
 
-/* Focusing checkbox__input */
-.app__checkbox .checkbox__input:focus ~ .checkbox__mark {
-  @apply border-gray-1 bg-gray-6;
-  @apply transition duration-200;
+/*-----------
+    Focus
+-----------*/
+.checkbox .checkbox-input:focus ~ .checkbox-mark {
+  border: 1px solid var(--blue);
+  background-color: var(--grey-tint-3);
+  transition: all 200ms;
 }
 
-.app__checkbox .checkbox__input:focus ~ .checkbox__label {
-  @apply text-gray-1;
-  @apply transition duration-200;
+.checkbox .checkbox-input:focus ~ .checkbox-label {
+  color: var(--grey-shade-3);
+  transition: all 200ms;
 }
 
-/* Input checked */
-.app__checkbox .checkbox__input:checked ~ .checkbox__mark {
-  @apply bg-white;
+/*-------------
+    Checked
+-------------*/
+.checkbox .checkbox-input:checked ~ .checkbox-mark {
+  background-color: var(--white);
 }
 
-.app__checkbox .checkbox__input:checked ~ .checkbox__label {
-  @apply text-gray-1;
+.checkbox .checkbox-input:checked ~ .checkbox-label {
+  color: var(--grey-shade-3);
 }
 
-.checkbox__mark:after {
+.checkbox .checkbox-input:checked ~ .checkbox-mark:after {
+  display: block;
+}
+
+/*------------
+    Marker
+------------*/
+.checkbox .checkbox-mark:after {
   content: '';
-  @apply absolute hidden;
-}
-
-.app__checkbox .checkbox__input:checked ~ .checkbox__mark:after {
-  @apply block;
-}
-
-/* Input marker */
-.app__checkbox .checkbox__mark:after {
-  left: 0.3rem;
+  display: none;
+  position: absolute;
   top: 0.1rem;
+  left: 0.35rem;
+  width: 0.5rem;
+  height: 0.75rem;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
+  border-style: solid;
+  border-color: var(--grey-shade-3);
   transform: rotate(45deg);
-  @apply border-gray-1;
-  @apply w-2 h-3;
 }

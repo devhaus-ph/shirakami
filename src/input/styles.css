@@ -1,10 +1,13 @@
-.app__input {
-  @apply block;
-  @apply px-2 border border-gray-5;
-  @apply transition duration-200;
+.input {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--grey-tint-2);
+  letter-spacing: 1px;
+  transition: all 200ms;
 }
-.app__input:focus {
-  @apply border-gray-1;
-  @apply bg-gray-6;
-  @apply transition duration-200;
+
+.input:focus {
+  border-color: var(--grey-shade-3);
+  background-color: var(--grey-tint-3);
+  transition: all 200ms;
 }

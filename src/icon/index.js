@@ -33,10 +33,20 @@ function Icon(props) {
   }
 
   const IconName = icons[props.icon]
-  return <IconName height={props.height} width={props.width} />
+
+  return (
+    <IconName
+      className={props.className}
+      height={props.iconSize}
+      width={props.iconSize}
+    />
+  )
 }
 
 Icon.propTypes = {
+  className: PropTypes.string,
+  height: PropTypes.number,
+  width: PropTypes.number,
   icon: PropTypes.oneOf([
     'add',
     'back',
@@ -52,13 +62,10 @@ Icon.propTypes = {
     'power',
     'gear',
   ]),
-  height: PropTypes.number,
-  width: PropTypes.number,
 }
 
 Icon.defaultProps = {
-  height: 24,
-  width: 24,
+  iconSize: 24,
 }
 
 export default Icon

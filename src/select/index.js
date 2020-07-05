@@ -5,9 +5,9 @@ import Icon from './../icon'
 
 function Select(props) {
   return (
-    <div className="app__select">
-      <select className="select__element">{props.children}</select>
-      <span className="select__icon">
+    <div className="select">
+      <select className="select-element">{props.children}</select>
+      <span className="select-icon">
         <Icon icon="down" />
       </span>
     </div>

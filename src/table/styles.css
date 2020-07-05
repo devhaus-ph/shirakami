@@ -1,40 +1,48 @@
-.app__table {
-  @apply w-full;
+.table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.table__header {
-  @apply border-b border-gray-3;
-  @apply text-gray-3 text-left;
+.table-header {
+  border-bottom: 1px solid var(--grey);
+  color: var(--grey);
+  text-align: left;
 }
 
-.table__headercell {
-  @apply px-4 font-light;
+.table-headercell {
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.table__headercell:first-child {
-  @apply pl-4;
+.table-headercell:first-child {
+  padding-left: 1rem;
 }
 
-.table__headercell:last-child {
-  @apply pr-4;
+.table-headercell:last-child {
+  padding-right: 1rem;
 }
 
-.table__row {
-  @apply h-8 px-4;
+.table-row {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.table__row:nth-child(even) {
-  @apply bg-gray-6;
+.table-row:nth-child(even) {
+  background-color: var(--light);
 }
 
-.table__cell {
-  @apply px-4 capitalize;
+.table-cell {
+  text-transform: capitalize;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.table__cell:first-child {
-  @apply pl-4;
+.table-cell:first-child {
+  padding-left: 1rem;
 }
 
-.table__cell:last-child {
-  @apply pr-4;
+.table-cell:last-child {
+  padding-right: 1rem;
 }

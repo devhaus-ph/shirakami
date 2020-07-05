@@ -4,20 +4,26 @@
   "description": "React UI Kit by DevHaus",
   "main": "dist/shirakami.js",
   "module": "dist/uwu.esm.js",
+  "dependencies": {
+    "sanitize.css": "^11.0.1",
+    "typeface-oxygen": "0.0.72"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "microbundle": "^0.12.2",
-    "rimraf": "^3.0.2",
-    "tailwindcss": "^1.4.6"
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
     "prop-types": "15.*",
-    "react": "16.*",
-    "typeface-oxygen": "0.0.*"
+    "react": "16.*"
   },
   "scripts": {
+    "start": "parcel docs/index.html --port 3000",
     "build": "microbundle --jsx=React.createElement --css-modules=false",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist .cache"
   },
   "keywords": [
     "react",

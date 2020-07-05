@@ -1,8 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Add(props) {
   return (
     <svg
+      className={props.className}
       width={props.height}
       height={props.width}
       viewBox="0 0 24 24"
@@ -23,6 +25,10 @@ function Add(props) {
       />
     </svg>
   )
+}
+
+Add.propTypes = {
+  className: PropTypes.string,
 }
 
 export default Add

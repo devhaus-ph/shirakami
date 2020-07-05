@@ -1,8 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Back(props) {
   return (
     <svg
+      className={props.className}
       width={props.width}
       height={props.height}
       viewBox="0 0 24 24"
@@ -23,6 +25,10 @@ function Back(props) {
       />
     </svg>
   )
+}
+
+Back.propTypes = {
+  className: PropTypes.string,
 }
 
 export default Back

@@ -1,15 +1,21 @@
-.app__section {
-  @apply mb-16;
+.section {
+  margin-bottom: 2rem;
 }
 
-.section__title {
-  @apply mb-4;
+.section-title {
+  margin-bottom: 1rem;
 }
 
-.section__field {
-  @apply mb-4;
+.section-field {
+  margin-top: 0;
 }
 
-.section__label {
-  @apply mb-1 text-gray-3;
+.section-field > p {
+  margin-top: 0;
+}
+
+.section-label {
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--grey);
 }

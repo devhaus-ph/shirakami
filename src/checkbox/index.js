@@ -3,17 +3,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Checkbox(props) {
+  const styleName = [props.component, props.className].join(' ')
+
   return (
-    <label className="app__checkbox">
-      <input className="checkbox__input" type="checkbox" />
-      <span className="checkbox__label">{props.label}</span>
-      <span className="checkbox__mark" />
+    <label className={styleName}>
+      <input className="checkbox-input" type="checkbox" />
+      <span className="checkbox-label">{props.label}</span>
+      <span className="checkbox-mark" />
     </label>
   )
 }
 
 Checkbox.propTypes = {
+  className: PropTypes.string,
   label: PropTypes.string,
+}
+
+Checkbox.defaultProps = {
+  component: 'checkbox',
 }
 
 export default Checkbox

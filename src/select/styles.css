@@ -1,29 +1,44 @@
-.app__select {
+.select {
+  display: flex;
+  position: relative;
   width: 227px;
-  @apply relative flex;
-  @apply border border-gray-5;
-  @apply appearance-none;
-  @apply transition duration-200;
+  border: 1px solid var(--grey-tint-3);
+  appearance: none;
+  transition: all 200ms;
 }
-.app__select:hover {
-  @apply border-gray-1 bg-gray-6;
-  @apply transition duration-200;
+
+.select:hover {
+  border-color: var(--grey-shade-3);
+  background-color: var(--grey-tint-3);
+  transition: all 200ms;
 }
-.app__select:focus-within {
-  @apply border-gray-1 bg-gray-6;
-  @apply transition duration-200;
+
+.select:focus-within {
+  border: 1px solid var(--grey-shade-3);
+  background-color: var(--grey-tint-3);
+  transition: all 200ms;
 }
-.select__element {
+
+.select-element {
+  width: 100%;
   height: 26px;
+  padding-left: 0.25rem;
+  background-color: transparent;
+  appearance: none;
+  -moz-appearance: none;
   z-index: 2;
-  @apply pl-1 w-full;
-  @apply bg-transparent;
-  @apply appearance-none;
 }
-.select__icon {
+
+.select-element::after {
+  border: none;
+}
+
+.select-icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
   height: 26px;
+  border-left: 1px solid var(--grey-tint-3);
   z-index: 1;
-  @apply absolute right-0;
-  @apply flex items-center;
-  @apply border-l border-gray-5;
 }

@@ -1,96 +1,119 @@
-.app__button {
-  @apply relative inline-block;
-  @apply px-6 py-1;
-  @apply text-xs;
-  @apply cursor-pointer;
-  @apply transition duration-200;
+/*------------
+    Button
+------------*/
+.button {
+  width: min-content;
+  height: min-content;
+  padding: 0.3rem 1.75rem;
+  transition: all 100ms;
+  cursor: pointer;
+  outline: none;
 }
 
-.app__button:after {
-  content: '';
-  @apply absolute top-0 left-0;
-  @apply w-full h-full;
-  @apply bg-gray-6 opacity-0;
-  @apply transition-all duration-200;
+/*--------------------
+    Variant: Solid
+--------------------*/
+.button.solid {
+  border: 2px solid var(--grey-shade-3);
+  background-color: var(--grey-shade-3);
+  color: var(--white);
 }
 
-.app__button:active:after {
-  @apply bg-gray-6 opacity-50;
+.button.solid:hover {
+  border: 2px solid var(--grey-shade-2);
+  background-color: var(--grey-shade-2);
+  color: var(--white);
 }
 
-.app__button.button--solid {
-  @apply border border-gray-1;
-  @apply bg-gray-1 text-gray-6;
+.button.solid:focus {
+  border: 2px solid var(--blue);
+  background-color: var(--grey-shade-3);
 }
 
-.app__button.button--solid:hover {
-  @apply border-gray-2 bg-gray-2;
+.button.solid:active {
+  border: 2px solid var(--grey-shade-1);
+  background-color: var(--grey-shade-1);
 }
 
-.app__button.button--solid:focus {
-  @apply border-gray-2 bg-gray-2;
+/*----------------------
+    Variant: Outline
+----------------------*/
+.button.outline {
+  border: 2px solid var(--grey-shade-3);
+  background-color: var(--white);
+  color: var(--grey-shade-3);
 }
 
-.app__button.button--outline {
-  @apply border border-gray-1;
-  @apply text-gray-1;
+.button.outline:hover {
+  border: 2px solid var(--grey-shade-2);
+  background-color: var(--grey-tint-3);
+  color: var(--grey-shade-2);
 }
 
-.app__button.button--outline:hover {
-  @apply bg-gray-1 text-gray-6;
+.button.outline:focus {
+  border: 2px solid var(--blue);
+  color: var(--grey-shade-3);
 }
 
-.app__button.button--outline:focus {
-  @apply bg-gray-1 text-gray-6;
+.button.outline:active {
+  border: 2px solid var(--grey-shade-1);
+  background-color: var(--grey-shade-1);
+  color: var(--white);
 }
 
-.app__button.button--text {
-  @apply border-0;
-  @apply text-gray-1 bg-white;
-  @apply appearance-none;
+/*-------------------
+    Variant: Text
+-------------------*/
+.button.text {
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--white);
+  background-color: var(--white);
+  color: var(--grey-shade-3);
 }
 
-.app__button.button--text:hover {
-  @apply border-0 bg-gray-6;
+.button.text:hover {
+  background-color: var(--grey-tint-3);
+  color: var(--grey-shade-2);
 }
 
-.app__button.button--text:focus {
-  @apply border-0 bg-gray-6;
+.button.text:focus {
+  border: 2px solid var(--blue);
+  background-color: var(--white);
+  color: var(--grey-shade-3);
 }
 
-.app__button.button--text:after {
-  content: '';
-  @apply absolute top-0 left-0;
-  @apply w-full h-full;
-  @apply bg-gray-1 opacity-0;
-  @apply transition-all duration-200;
+.button.text:active {
+  border: 2px solid var(--grey-shade-1);
+  background-color: var(--grey-shade-1);
+  color: var(--white);
 }
 
-.app__button.button--text:active:after {
-  @apply bg-gray-1 opacity-50;
+/*-------------------
+    Variant: Icon
+-------------------*/
+.button.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  padding: 0.2rem 0.2rem;
+  border: 2px solid var(--white);
+  background-color: var(--white);
+  color: var(--grey-shade-3);
+  border-radius: 0.5rem;
 }
 
-.app__button.button--icon {
-  @apply m-0 p-1;
-  @apply border-0 rounded-sm;
+.button.icon:hover {
+  border: 2px solid var(--grey-tint-3);
+  background-color: var(--grey-tint-3);
 }
 
-.app__button.button--icon:hover {
-  @apply bg-gray-5;
+.button.icon:focus {
+  border: 2px solid var(--blue);
+  background-color: var(--white);
 }
 
-.app__button.button--icon:focus {
-  @apply bg-gray-5;
-}
-
-.app__button.button--icon:after {
-  content: '';
-  @apply absolute top-0 left-0;
-  @apply w-full h-full;
-  @apply bg-gray-1 opacity-0;
-  @apply transition-all duration-200;
-}
-
-.app__button.button--icon:active:after {
-  @apply bg-gray-1 opacity-50;
+.button.icon:active {
+  border: 2px solid var(--grey);
+  background-color: var(--grey);
 }

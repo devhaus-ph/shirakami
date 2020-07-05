@@ -1,25 +1,56 @@
-/* purgecss start ignore */
-@tailwind base;
+/*----------------------
+    shirakami-ui.css
+----------------------*/
 
-h1 {
-  @apply text-2xl leading-6;
-}
-h2 {
-  @apply text-xl leading-5;
-}
-p {
-  @apply text-base leading-4;
-}
-label {
-  @apply text-xs leading-3 block;
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light: hsl(0, 0%, 93%);
+  --grey-tint-3: hsl(0, 0%, 87.5%);
+  --grey-tint-2: hsl(0, 0%, 75%);
+  --grey-tint-1: hsl(0, 0%, 63%);
+  --grey: hsl(0, 0%, 50%);
+  --grey-shade-1: hsl(0, 0%, 38%);
+  --grey-shade-2: hsl(0, 0%, 26%);
+  --grey-shade-3: hsl(0, 0%, 13%);
+  --dark: hsl(0, 0%, 7%);
+  --black: hsl(0, 0%, 0%);
+
+  --blue-tint-1: hsl(200, 100%, 90%);
+  --blue: hsl(200, 100%, 80%);
+  --blue-shade-1: hsl(200, 100%, 70%);
+
+  --green-tint-1: hsl(140, 100%, 90%);
+  --green: hsl(140, 100%, 80%);
+  --green-shade-1: hsl(140, 100%, 70%);
+
+  --red-tint-1: hsl(0, 100%, 90%);
+  --red: hsl(0, 100%, 80%);
+  --red-shade-1: hsl(0, 100%, 70%);
+
+  --yellow-tint-1: hsl(60, 100%, 90%);
+  --yellow: hsl(60, 100%, 80%);
+  --yellow-shade-1: hsl(60, 100%, 70%);
 }
 
-@tailwind components;
-/* purgecss end ignore */
-
-@tailwind utilities;
+*,
+::after,
+::before {
+  border: none;
+}
 
 html {
-  @apply text-gray-1;
+  font-size: 16px;
   font-family: 'Oxygen', 'sans-serif';
+  color: var(--grey-shade-3);
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
 }
