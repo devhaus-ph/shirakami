@@ -75,6 +75,13 @@ function App() {
             </Table.Body>
           </Table>
           <Pagination activePage={2} totalPages={10} />
+          <Button>Submit</Button>
+          <p />
+          <Button variant="outline">Submit</Button>
+          <p />
+          <Button variant="text">Submit</Button>
+          <p />
+          <Button variant="icon" icon="user" />
         </Content>
       </Content>
     </Container>
