@@ -10,6 +10,7 @@ import {
   Input,
   Field,
   Dropdown,
+  Form,
 } from '../src'
 
 function App() {
@@ -26,40 +27,43 @@ function App() {
           </Sidebar.Menu>
 
           <Sidebar.Menu>
-            <Sidebar.Item>Dashboard</Sidebar.Item>
-            <Sidebar.Item>Users</Sidebar.Item>
-            <Sidebar.Item>Profiles</Sidebar.Item>
-            <Sidebar.Item>Location</Sidebar.Item>
-          </Sidebar.Menu>
-
-          <Sidebar.Menu>
             <Sidebar.Label>DRRM</Sidebar.Label>
             <Sidebar.Item>Health</Sidebar.Item>
           </Sidebar.Menu>
         </Sidebar>
         <Flex fullwidth>
           <h1>Users</h1>
-          <Toolbar direction="row">
-            <Button variant="icon" icon="add" />
-            <Button variant="icon" icon="filter" />
-            <Button variant="icon" icon="refresh" />
-          </Toolbar>
+          <p></p>
 
-          <Field>
-            <Field.Label>First Name</Field.Label>
-            <Input />
-            <Field.Message></Field.Message>
-          </Field>
+          <Form>
+            <Form.Title>User Form</Form.Title>
+            <Form.Description>Create new user.</Form.Description>
+            <Form.Section>
+              <Form.Label>Personal Details</Form.Label>
 
-          <Field>
-            <Field.Label>Forms</Field.Label>
-            <Checkbox>Form 137</Checkbox>
-            <Checkbox>Birth Certificate</Checkbox>
-            <Checkbox>Enrolment Form</Checkbox>
-            <Checkbox>School ID</Checkbox>
-            <Checkbox>ID 2x2</Checkbox>
-            <Field.Message></Field.Message>
-          </Field>
+              <Field>
+                <Field.Label>First Name</Field.Label>
+                <Input />
+                <Field.Message></Field.Message>
+              </Field>
+
+              <Field>
+                <Field.Label>Middle Name</Field.Label>
+                <Input />
+                <Field.Message></Field.Message>
+              </Field>
+
+              <Field>
+                <Field.Label>Last Name</Field.Label>
+                <Input />
+                <Field.Message></Field.Message>
+              </Field>
+            </Form.Section>
+            <Form.Footer>
+              <Button>Submit</Button>
+              <Button variant="outline">Cancel</Button>
+            </Form.Footer>
+          </Form>
         </Flex>
       </Flex>
     </Container>
