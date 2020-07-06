@@ -9,6 +9,7 @@ import {
   Checkbox,
   Input,
   Field,
+  Dropdown,
 } from '../src'
 
 function App() {
@@ -36,6 +37,16 @@ function App() {
             <Button variant="icon" icon="filter" />
             <Button variant="icon" icon="refresh" />
           </Toolbar>
+          <Dropdown icon="more">
+            <Dropdown.Item>Option One</Dropdown.Item>
+            <Dropdown.Item>Option Two</Dropdown.Item>
+            <Dropdown.Item>Option Three</Dropdown.Item>
+          </Dropdown>
+          <Dropdown icon="user">
+            <Dropdown.Item>Option One</Dropdown.Item>
+            <Dropdown.Item>Option Two</Dropdown.Item>
+            <Dropdown.Item>Option Three</Dropdown.Item>
+          </Dropdown>
           <Field label="Haayyggq">
             <Input />
           </Field>

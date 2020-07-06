@@ -1,80 +1,59 @@
 import './styles.css'
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Button } from './../'
-
-const VISIBLE = 'dropdown-menu-active'
+import { Button } from '../../src'
 
 function Dropdown(props) {
+  const VISIBLE = 'menu-active'
   const refToggleButton = useRef()
+  const [displayStatus, setDisplayStatus] = useState('')
+  const openDropdownMenu = () => setDisplayStatus(VISIBLE)
+  const closeDropdownMenu = () => setDisplayStatus('')
 
-  // List of CSS class in object styleName.
-  const [styleName, setStyleName] = useState({
-    dropdownMenu: 'dropdown-menu',
-    status: '',
-  })
-
-  // Adds an event that closes the component.
-  // Remove the event if the component was destroyed.
-  useEffect(() => {
-    document.body.addEventListener('click', handleClickOutside)
-    return () => document.body.removeEventListener('click', handleClickOutside)
-  }, [styleName])
+  function toggleDropdownMenu() {
+    displayStatus !== VISIBLE ? openDropdownMenu() : closeDropdownMenu()
+  }
 
   function handleClickOutside(e) {
     if (!refToggleButton.current.contains(e.target)) closeDropdownMenu()
   }
 
-  function toggleDropdownMenu() {
-    if (styleName.status !== VISIBLE) openDropdownMenu()
-    if (styleName.status === VISIBLE) closeDropdownMenu()
-  }
-
-  function openDropdownMenu() {
-    setStyleName({ ...styleName, status: VISIBLE })
-  }
-
-  function closeDropdownMenu() {
-    setStyleName({ ...styleName, status: '' })
-  }
-
-  styleName.values = () => Object.values(styleName).join(' ')
+  useEffect(() => {
+    document.body.addEventListener('click', handleClickOutside)
+    return () => document.body.removeEventListener('click', handleClickOutside)
+  }, [displayStatus])
 
   return (
     <div className="dropdown">
-      <div
-        className="dropdown-toggle"
-        ref={refToggleButton}
-        onClick={toggleDropdownMenu}>
+      <div ref={refToggleButton} onClick={toggleDropdownMenu}>
         <Button variant="icon" icon={props.icon} iconSize={props.iconSize} />
       </div>
-      <div className={styleName.values()}>{props.children}</div>
+      <dl className={`menu ${displayStatus}`}>{props.children}</dl>
     </div>
   )
 }
 
-Dropdown.Menu = (props) => <dl>{props.children}</dl>
-
-Dropdown.Item = (props) => (
-  <dt className="dropdown-item" onClick={props.onClick}>
-    {props.children}
-  </dt>
-)
+Dropdown.Item = (props) => {
+  let styleName = [props.component, props.className].join(' ').trim()
+  return (
+    <dt className={styleName} onClick={props.onClick}>
+      {props.children}
+    </dt>
+  )
+}
 
 /*---------------
     PropTypes
 ---------------*/
 Dropdown.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.node,
   icon: PropTypes.string,
   iconSize: PropTypes.number,
 }
 
-Dropdown.Menu.propTypes = {
-  children: PropTypes.node,
-}
-
 Dropdown.Item.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   onClick: PropTypes.func,
 }
@@ -85,6 +64,10 @@ Dropdown.Item.propTypes = {
 Dropdown.defaultProps = {
   icon: 'more',
   iconSize: 18,
+}
+
+Dropdown.Item.defaultProps = {
+  component: 'item',
 }
 
 export default Dropdown
