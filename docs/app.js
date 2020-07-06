@@ -26,6 +26,13 @@ function App() {
           </Sidebar.Menu>
 
           <Sidebar.Menu>
+            <Sidebar.Item>Dashboard</Sidebar.Item>
+            <Sidebar.Item>Users</Sidebar.Item>
+            <Sidebar.Item>Profiles</Sidebar.Item>
+            <Sidebar.Item>Location</Sidebar.Item>
+          </Sidebar.Menu>
+
+          <Sidebar.Menu>
             <Sidebar.Label>DRRM</Sidebar.Label>
             <Sidebar.Item>Health</Sidebar.Item>
           </Sidebar.Menu>
@@ -37,25 +44,21 @@ function App() {
             <Button variant="icon" icon="filter" />
             <Button variant="icon" icon="refresh" />
           </Toolbar>
-          <Dropdown icon="more">
-            <Dropdown.Item>Option One</Dropdown.Item>
-            <Dropdown.Item>Option Two</Dropdown.Item>
-            <Dropdown.Item>Option Three</Dropdown.Item>
-          </Dropdown>
-          <Dropdown icon="user">
-            <Dropdown.Item>Option One</Dropdown.Item>
-            <Dropdown.Item>Option Two</Dropdown.Item>
-            <Dropdown.Item>Option Three</Dropdown.Item>
-          </Dropdown>
-          <Field label="Haayyggq">
+
+          <Field>
+            <Field.Label>First Name</Field.Label>
             <Input />
+            <Field.Message></Field.Message>
           </Field>
-          <Field label="Requirements">
+
+          <Field>
+            <Field.Label>Forms</Field.Label>
             <Checkbox>Form 137</Checkbox>
             <Checkbox>Birth Certificate</Checkbox>
             <Checkbox>Enrolment Form</Checkbox>
             <Checkbox>School ID</Checkbox>
             <Checkbox>ID 2x2</Checkbox>
+            <Field.Message></Field.Message>
           </Field>
         </Flex>
       </Flex>
