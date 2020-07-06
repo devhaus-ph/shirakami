@@ -6,20 +6,12 @@ import {
   Toolbar,
   Sidebar,
   Button,
-  Table,
-  Pagination,
+  Checkbox,
+  Input,
+  Field,
 } from '../src'
 
 function App() {
-  const [displayModal, setDisplayModal] = useState(false)
-
-  function openFilterModal() {
-    setDisplayModal(true)
-  }
-  function closeFilterModal() {
-    setDisplayModal(false)
-  }
-
   return (
     <Container>
       <Titlebar>Shirakami UI by DevHaus Innovations</Titlebar>
@@ -41,47 +33,19 @@ function App() {
           <h1>Users</h1>
           <Toolbar direction="row">
             <Button variant="icon" icon="add" />
-            <Button variant="icon" icon="filter" onClick={openFilterModal} />
+            <Button variant="icon" icon="filter" />
             <Button variant="icon" icon="refresh" />
           </Toolbar>
-          <Table>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Role</Table.HeaderCell>
-                <Table.HeaderCell>Status</Table.HeaderCell>
-                <Table.HeaderCell>Updated</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              <Table.Row>
-                <Table.Cell>Cliemtor Fabros</Table.Cell>
-                <Table.Cell>Admin</Table.Cell>
-                <Table.Cell>Active</Table.Cell>
-                <Table.Cell right>2019-08-12</Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>Cliemtor Fabros</Table.Cell>
-                <Table.Cell>Admin</Table.Cell>
-                <Table.Cell>Active</Table.Cell>
-                <Table.Cell right>2019-08-12</Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>Cliemtor Fabros</Table.Cell>
-                <Table.Cell>Admin</Table.Cell>
-                <Table.Cell>Active</Table.Cell>
-                <Table.Cell right>2019-08-12</Table.Cell>
-              </Table.Row>
-            </Table.Body>
-          </Table>
-          <Pagination activePage={2} totalPages={10} />
-          <Button>Submit</Button>
-          <p />
-          <Button variant="outline">Submit</Button>
-          <p />
-          <Button variant="text">Submit</Button>
-          <p />
-          <Button variant="icon" icon="user" />
+          <Field label="Haayyggq">
+            <Input />
+          </Field>
+          <Field label="Requirements">
+            <Checkbox>Form 137</Checkbox>
+            <Checkbox>Birth Certificate</Checkbox>
+            <Checkbox>Enrolment Form</Checkbox>
+            <Checkbox>School ID</Checkbox>
+            <Checkbox>ID 2x2</Checkbox>
+          </Field>
         </Content>
       </Content>
     </Container>
