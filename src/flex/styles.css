@@ -1,17 +1,17 @@
-.content {
+.flex {
   display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.content.row {
+.flex.row {
   flex-direction: row;
 }
 
-.content.column {
+.flex.column {
   flex-direction: column;
 }
 
-.content.full {
+.flex.fullwidth {
   width: 100%;
 }

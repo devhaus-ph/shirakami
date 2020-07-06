@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Container,
-  Content,
+  Flex,
   Titlebar,
   Toolbar,
   Sidebar,
@@ -15,7 +15,7 @@ function App() {
   return (
     <Container>
       <Titlebar>Shirakami UI by DevHaus Innovations</Titlebar>
-      <Content direction="row">
+      <Flex direction="row">
         <Sidebar>
           <Sidebar.Menu>
             <Sidebar.Item>Dashboard</Sidebar.Item>
@@ -29,7 +29,7 @@ function App() {
             <Sidebar.Item>Health</Sidebar.Item>
           </Sidebar.Menu>
         </Sidebar>
-        <Content width="full">
+        <Flex fullwidth>
           <h1>Users</h1>
           <Toolbar direction="row">
             <Button variant="icon" icon="add" />
@@ -46,8 +46,8 @@ function App() {
             <Checkbox>School ID</Checkbox>
             <Checkbox>ID 2x2</Checkbox>
           </Field>
-        </Content>
-      </Content>
+        </Flex>
+      </Flex>
     </Container>
   )
 }
