@@ -1,5 +1,16 @@
 import React from 'react'
-import { Container, Flex, Titlebar, Toolbar, Sidebar, Button } from '../src'
+import {
+  Container,
+  Flex,
+  Titlebar,
+  Toolbar,
+  Sidebar,
+  Button,
+  Modal,
+  Section,
+  Field,
+  Input,
+} from '../src'
 
 function App() {
   return (
@@ -23,7 +34,32 @@ function App() {
           <h1>Users</h1>
           <Toolbar direction="row">
             <Button variant="icon" icon="add" />
-            <Button variant="icon" icon="filter" />
+            <Modal icon="filter">
+              <Section title="Filter">
+                <Field>
+                  <Field.Label>Name</Field.Label>
+                  <Input />
+                </Field>
+                <Field>
+                  <Field.Label>Role</Field.Label>
+                  <Input />
+                </Field>
+                <Field>
+                  <Field.Label>Status</Field.Label>
+                  <Input />
+                </Field>
+              </Section>
+              <Section title="Sort">
+                <Field>
+                  <Field.Label>Municipal</Field.Label>
+                  <Input />
+                </Field>
+                <Field>
+                  <Field.Label>Barangay</Field.Label>
+                  <Input />
+                </Field>
+              </Section>
+            </Modal>
             <Button variant="icon" icon="refresh" />
           </Toolbar>
         </Flex>
