@@ -1,17 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  Flex,
-  Titlebar,
-  Toolbar,
-  Sidebar,
-  Button,
-  Checkbox,
-  Input,
-  Field,
-  Dropdown,
-  Form,
-} from '../src'
+import { Container, Flex, Titlebar, Toolbar, Sidebar, Button } from '../src'
 
 function App() {
   return (
@@ -33,37 +21,11 @@ function App() {
         </Sidebar>
         <Flex fullwidth>
           <h1>Users</h1>
-          <p></p>
-
-          <Form>
-            <Form.Title>User Form</Form.Title>
-            <Form.Description>Create new user.</Form.Description>
-            <Form.Section>
-              <Form.Label>Personal Details</Form.Label>
-
-              <Field>
-                <Field.Label>First Name</Field.Label>
-                <Input />
-                <Field.Message></Field.Message>
-              </Field>
-
-              <Field>
-                <Field.Label>Middle Name</Field.Label>
-                <Input />
-                <Field.Message></Field.Message>
-              </Field>
-
-              <Field>
-                <Field.Label>Last Name</Field.Label>
-                <Input />
-                <Field.Message></Field.Message>
-              </Field>
-            </Form.Section>
-            <Form.Footer>
-              <Button>Submit</Button>
-              <Button variant="outline">Cancel</Button>
-            </Form.Footer>
-          </Form>
+          <Toolbar direction="row">
+            <Button variant="icon" icon="add" />
+            <Button variant="icon" icon="filter" />
+            <Button variant="icon" icon="refresh" />
+          </Toolbar>
         </Flex>
       </Flex>
     </Container>
