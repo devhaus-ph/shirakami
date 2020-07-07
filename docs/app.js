@@ -8,6 +8,8 @@ import {
   Button,
   Pagination,
   Section,
+  Field,
+  Select,
 } from '../src'
 
 function App() {
@@ -35,28 +37,22 @@ function App() {
             <Button variant="icon" icon="filter" />
             <Button variant="icon" icon="refresh" />
           </Toolbar>
-          <Section title="Personal Details">
-            <Section.Field label="First Name">
-              <p>Cliemtor</p>
-            </Section.Field>
-            <Section.Field label="Middle Name">
-              <p>Bungag</p>
-            </Section.Field>
-            <Section.Field label="Last Name">
-              <p>Fabros</p>
-            </Section.Field>
-          </Section>
-          <Section title="Personal Details">
-            <Section.Field label="First Name">
-              <p>Cliemtor</p>
-            </Section.Field>
-            <Section.Field label="Middle Name">
-              <p>Bungag</p>
-            </Section.Field>
-            <Section.Field label="Last Name">
-              <p>Fabros</p>
-            </Section.Field>
-          </Section>
+          <Field>
+            <Field.Label>Municipal</Field.Label>
+            <Select>
+              <Select.Option>Cabarroguis</Select.Option>
+              <Select.Option>Diffun</Select.Option>
+              <Select.Option>Saguday</Select.Option>
+            </Select>
+          </Field>
+          <Field>
+            <Field.Label>Barangay</Field.Label>
+            <Select>
+              <Select.Option>Gundaway</Select.Option>
+              <Select.Option>Zamora</Select.Option>
+              <Select.Option>Villamor</Select.Option>
+            </Select>
+          </Field>
           <Pagination activePage={5} totalPages={10} />
         </Flex>
       </Flex>
