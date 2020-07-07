@@ -6,66 +6,66 @@ function Pagination({ activePage, totalPages }) {
   const remainingPage = totalPages - activePage
 
   Pagination.First = () => {
-    if (activePage > 2) return <a className="pagination-item">1</a>
-    if (activePage <= 2) return <a className="hidden" />
+    if (activePage > 2) return <a className="item">1</a>
+    if (activePage <= 2) return <></>
   }
 
   Pagination.FirstToPrevious = () => {
     if (activePage > 3) {
       if (activePage - 2 <= 2) {
-        return <a className="pagination-item">{activePage - 2}</a>
+        return <a className="item">{activePage - 2}</a>
       }
       if (activePage - 2 >= 3) {
-        return <a className="pagination-ellipsis">...</a>
+        return <a className="ellipsis">...</a>
       }
     }
     if (activePage <= 3) {
-      return <a className="hidden" />
+      return <></>
     }
   }
 
   Pagination.Previous = () => {
     if (activePage >= 2) {
-      return <a className="pagination-item">{activePage - 1}</a>
+      return <a className="item">{activePage - 1}</a>
     }
     if (activePage < 2) {
-      return <a className="hidden" />
+      return <></>
     }
   }
 
   Pagination.Active = () => {
-    return <a className="pagination-item-active">{activePage}</a>
+    return <a className="item active">{activePage}</a>
   }
 
   Pagination.Next = () => {
     if (remainingPage >= 1) {
-      return <a className="pagination-item">{activePage + 1}</a>
+      return <a className="item">{activePage + 1}</a>
     }
     if (remainingPage < 1) {
-      return <a className="hidden" />
+      return <></>
     }
   }
 
   Pagination.NextToLast = () => {
     if (remainingPage > 2) {
       if (totalPages - (activePage + 1) <= 2) {
-        return <a className="pagination-item">{activePage + 2}</a>
+        return <a className="item">{activePage + 2}</a>
       }
       if (totalPages - (activePage + 1) >= 3) {
-        return <a className="pagination-ellipsis">...</a>
+        return <a className="ellipsis">...</a>
       }
     }
     if (remainingPage <= 2) {
-      return <a className="hidden" />
+      return <></>
     }
   }
 
   Pagination.Last = () => {
     if (remainingPage > 1) {
-      return <a className="pagination-item">{totalPages}</a>
+      return <a className="item">{totalPages}</a>
     }
     if (remainingPage <= 1) {
-      return <a className="hidden" />
+      return <></>
     }
   }
 
