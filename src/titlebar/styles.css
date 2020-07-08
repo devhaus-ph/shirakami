@@ -1,8 +1,30 @@
 .titlebar {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--light);
   font-size: 1rem;
   color: var(--grey);
   user-select: none;
+}
+
+.titlebar-title {
+  display: none;
+}
+
+/*------------
+Mobile
+------------*/
+@media (min-width: 640px) {
+  .titlebar {
+    padding: 2rem 1rem;
+  }
+
+  .titlebar-title {
+    display: block;
+  }
+
+  .titlebar-abbr {
+    display: none;
+  }
 }

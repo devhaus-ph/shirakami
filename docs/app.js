@@ -7,7 +7,6 @@ import {
   Sidebar,
   Button,
   Pagination,
-  Section,
   Field,
   Select,
 } from '../src'
@@ -15,7 +14,7 @@ import {
 function App() {
   return (
     <Container>
-      <Titlebar>Shirakami UI by DevHaus Innovations</Titlebar>
+      <Titlebar abbr="Q-PHN">Quirino - Public Health and Nutrition</Titlebar>
       <Flex direction="row">
         <Sidebar>
           <Sidebar.Menu>
