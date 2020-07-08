@@ -1,5 +1,22 @@
+/*-------------
+    Sidebar
+-------------*/
 .sidebar {
-  width: 275px;
+  z-index: 10;
+}
+
+.sidebar-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1rem 4rem 1rem;
+  background-color: rgba(255, 255, 255, 95%);
+}
+
+.sidebar-content.active {
+  display: block;
 }
 
 .sidebar-menu {
@@ -24,4 +41,40 @@
 .sidebar-item:hover {
   background-color: var(--grey-tint-3);
   transition: all 200ms;
+}
+
+.sidebar-footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--light);
+  background-color: rgba(255, 255, 255, 95%);
+}
+
+/*------------
+    Tablet
+------------*/
+@media (min-width: 640px) {
+  .sidebar {
+    position: static;
+    width: 275px;
+    border-right: 1px solid var(--light);
+  }
+
+  .sidebar-content {
+    display: block;
+    position: static;
+  }
+
+  .sidebar-item {
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
 }
