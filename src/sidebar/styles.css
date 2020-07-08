@@ -62,8 +62,10 @@
   .sidebar {
     position: static;
     width: 275px;
-    padding-top: 2rem;
     border-right: 1px solid var(--light);
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .sidebar-content {

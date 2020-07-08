@@ -7,7 +7,7 @@ function Button(props) {
   let styleName = [props.component, props.className, props.variant]
   styleName = styleName.join(' ').trim()
 
-  let buttonIcon = <></>
+  let buttonIcon = <div className="hidden"></div>
   if (props.icon) {
     buttonIcon = <Icon icon={props.icon} iconSize={props.iconSize} />
   }

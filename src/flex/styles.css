@@ -18,12 +18,15 @@
   width: 100%;
 }
 
+.flex.fullheight {
+  height: 100%;
+}
+
 /*------------
     Tablet
 ------------*/
 @media (min-width: 640px) {
   .flex {
-    padding-top: 3rem;
-    padding-bottom: 0;
+    padding: 3rem 0 0 0;
   }
 }

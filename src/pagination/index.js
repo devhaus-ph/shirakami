@@ -7,7 +7,7 @@ function Pagination({ activePage, totalPages }) {
 
   Pagination.First = () => {
     if (activePage > 2) return <a className="item">1</a>
-    if (activePage <= 2) return <></>
+    if (activePage <= 2) return <div className="hidden"></div>
   }
 
   Pagination.FirstToPrevious = () => {
@@ -20,7 +20,7 @@ function Pagination({ activePage, totalPages }) {
       }
     }
     if (activePage <= 3) {
-      return <></>
+      return <div className="hidden"></div>
     }
   }
 
@@ -29,7 +29,7 @@ function Pagination({ activePage, totalPages }) {
       return <a className="item">{activePage - 1}</a>
     }
     if (activePage < 2) {
-      return <></>
+      return <div className="hidden"></div>
     }
   }
 
@@ -42,7 +42,7 @@ function Pagination({ activePage, totalPages }) {
       return <a className="item">{activePage + 1}</a>
     }
     if (remainingPage < 1) {
-      return <></>
+      return <div className="hidden"></div>
     }
   }
 
@@ -56,7 +56,7 @@ function Pagination({ activePage, totalPages }) {
       }
     }
     if (remainingPage <= 2) {
-      return <></>
+      return <div className="hidden"></div>
     }
   }
 
@@ -65,7 +65,7 @@ function Pagination({ activePage, totalPages }) {
       return <a className="item">{totalPages}</a>
     }
     if (remainingPage <= 1) {
-      return <></>
+      return <div className="hidden"></div>
     }
   }
 
