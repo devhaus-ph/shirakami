@@ -1,8 +1,36 @@
 .titlebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--light);
+  background-color: rgba(255, 255, 255, 95%);
   font-size: 1rem;
   color: var(--grey);
   user-select: none;
+  z-index: 20;
+}
+
+.titlebar-title {
+  display: none;
+}
+
+/*------------
+    Tablet
+------------*/
+@media (min-width: 640px) {
+  .titlebar {
+    padding: 2rem 1rem;
+  }
+
+  .titlebar-title {
+    display: block;
+  }
+
+  .titlebar-abbr {
+    display: none;
+  }
 }

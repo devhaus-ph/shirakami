@@ -1,0 +1,29 @@
+/*----------
+    Flex
+----------*/
+.flex {
+  display: flex;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.fullwidth {
+  width: 100%;
+}
+
+/*------------
+    Tablet
+------------*/
+@media (min-width: 640px) {
+  .flex {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+}

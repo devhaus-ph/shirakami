@@ -3,27 +3,37 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Table(props) {
-  return <table className={`table ${props.className}`}>{props.children}</table>
+  return (
+    <table className={`table ${props.className}`.trim()}>
+      {props.children}
+    </table>
+  )
 }
 
 Table.Header = (props) => (
-  <thead className={`table-header ${props.className}`}>{props.children}</thead>
+  <thead className={`table-header ${props.className}`.trim()}>
+    {props.children}
+  </thead>
 )
 
 Table.Body = (props) => (
-  <tbody className={`table-body ${props.className}`}>{props.children}</tbody>
+  <tbody className={`table-body ${props.className}`.trim()}>
+    {props.children}
+  </tbody>
 )
 
 Table.HeaderCell = (props) => (
-  <th className={`table-headercell ${props.className}`}>{props.children}</th>
+  <th className={`table-headercell ${props.className}`.trim()}>
+    {props.children}
+  </th>
 )
 
 Table.Row = (props) => (
-  <tr className={`table-row ${props.className}`}>{props.children}</tr>
+  <tr className={`table-row ${props.className}`.trim()}>{props.children}</tr>
 )
 
 Table.Cell = (props) => (
-  <td className={`table-cell ${props.className}`}>{props.children}</td>
+  <td className={`table-cell ${props.className}`.trim()}>{props.children}</td>
 )
 
 Table.propTypes = {
