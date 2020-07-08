@@ -1,7 +1,7 @@
 import './styles.css'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Button } from '../../src'
+import Button from '../button'
 
 function Sidebar(props) {
   const styleName = [props.component, props.className].join(' ').trim()

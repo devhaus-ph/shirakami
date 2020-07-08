@@ -1,7 +1,7 @@
 import './styles.css'
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Button } from '../../src'
+import Button from '../button'
 
 function Dropdown(props) {
   const VISIBLE = 'menu-active'

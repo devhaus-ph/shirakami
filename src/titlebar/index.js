@@ -1,7 +1,7 @@
 import './styles.css'
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container } from '../../src'
+import Container from '../container'
 
 function Titlebar(props) {
   const styleName = [props.component, props.className].join(' ').trim()

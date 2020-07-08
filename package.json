@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "React UI Kit by DevHaus",
   "main": "dist/shirakami.js",
-  "module": "dist/uwu.esm.js",
+  "module": "dist/shirakami.esm.js",
   "dependencies": {
     "sanitize.css": "^11.0.1",
     "typeface-oxygen": "0.0.72"

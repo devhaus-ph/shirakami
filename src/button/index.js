@@ -1,7 +1,7 @@
 import './styles.css'
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Icon } from '../../src'
+import Icon from '../icon'
 
 function Button(props) {
   let styleName = [props.component, props.className, props.variant]
