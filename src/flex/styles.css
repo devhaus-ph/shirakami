@@ -24,5 +24,6 @@
 @media (min-width: 640px) {
   .flex {
     padding-top: 3rem;
+    padding-bottom: 0;
   }
 }
