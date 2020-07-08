@@ -1,10 +1,42 @@
 import './styles.css'
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Button } from '../../src'
 
 function Sidebar(props) {
   const styleName = [props.component, props.className].join(' ').trim()
-  return <aside className={styleName}>{props.children}</aside>
+  const [displayStatus, setDisplayStatus] = useState('')
+  const openSidebar = () => setDisplayStatus('active')
+  const closeSidebar = () => setDisplayStatus('')
+
+  let sidebarFooter
+  if (displayStatus) {
+    sidebarFooter = (
+      <div className="sidebar-footer">
+        <Button variant="text">Logout</Button>
+        <Button onClick={closeSidebar} variant="text">
+          Close
+        </Button>
+      </div>
+    )
+  } else {
+    sidebarFooter = (
+      <div className="sidebar-footer">
+        <Button onClick={openSidebar} variant="text">
+          Menu
+        </Button>
+      </div>
+    )
+  }
+
+  return (
+    <aside className={styleName}>
+      <div className={`sidebar-content ${displayStatus}`.trim()}>
+        {props.children}
+      </div>
+      {sidebarFooter}
+    </aside>
+  )
 }
 
 /*----------------

@@ -6,8 +6,8 @@ import { Icon } from '../../src'
 function Button(props) {
   let styleName = [props.component, props.className, props.variant]
   styleName = styleName.join(' ').trim()
-  let buttonIcon = <></>
 
+  let buttonIcon = <></>
   if (props.icon) {
     buttonIcon = <Icon icon={props.icon} iconSize={props.iconSize} />
   }

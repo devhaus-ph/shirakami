@@ -1,13 +1,16 @@
+/*-----------
+    Input
+-----------*/
 .input {
   display: block;
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--grey-tint-2);
-  letter-spacing: 1px;
+  outline: none;
   transition: all 200ms;
 }
 
 .input:focus {
   border-color: var(--grey-shade-3);
-  background-color: var(--grey-tint-3);
+  background-color: var(--light);
   transition: all 200ms;
 }

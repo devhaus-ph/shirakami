@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Input(props) {
-  const styleName = [props.component, props.className].join(' ')
+  const styleName = [props.component, props.className].join(' ').trim()
 
   return (
     <input

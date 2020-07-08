@@ -1,21 +1,25 @@
 .section {
+  padding-left: 1rem;
   margin-bottom: 2rem;
+  border-left: 1rem solid var(--grey-tint-3);
+  background-color: var(--light);
 }
 
-.section-title {
+.section > .title {
+  margin-top: 0.8rem;
   margin-bottom: 1rem;
 }
 
-.section-field {
+.section > .field {
   margin-top: 0;
+  margin-left: 1rem;
 }
 
-.section-field > p {
-  margin-top: 0;
+.section > .field > p {
+  margin: 0;
 }
 
-.section-label {
-  margin-bottom: 0.25rem;
+.section > .field > .label {
   font-size: 0.8rem;
-  color: var(--grey);
+  color: var(--grey-shade-1);
 }

@@ -3,19 +3,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Section(props) {
-  const styleName = ['section', props.className].join(' ')
+  const styleName = [props.component, props.className].join(' ').trim()
 
   return (
     <div className={styleName}>
-      <h2 className="section-title">{props.title}</h2>
+      <h2 className="title">{props.title}</h2>
       {props.children}
     </div>
   )
 }
 
 Section.Field = (props) => (
-  <div className="section-field">
-    <label className="section-label">{props.label}</label>
+  <div className="field">
+    <label className="label">{props.label}</label>
     {props.children}
   </div>
 )
@@ -33,6 +33,7 @@ Section.Field.propTypes = {
 
 Section.defaultProps = {
   className: '',
+  component: 'section',
 }
 
 export default Section

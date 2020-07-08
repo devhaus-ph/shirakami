@@ -1,38 +1,41 @@
+/*--------------
+    Dropdown
+--------------*/
+
 .dropdown {
   width: min-content;
 }
 
-.dropdown-menu {
+.dropdown > .menu {
   position: absolute;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin: 0;
   border: 1px solid var(--grey-tint-3);
   background-color: var(--white);
-  z-index: 10;
   opacity: 0;
-  transition: all 150ms;
+  z-index: 10;
   transform-origin: top;
-  transform: perspective(1000px) rotateX(-90deg);
+  transform: rotateX(-90deg);
+  transition: all 100ms;
 }
 
-.dropdown-menu-active {
+.dropdown > .menu-active {
   opacity: 100;
-  transition: all 150ms;
-  transform: perspective(1000px) rotateX(0deg);
+  transform: rotateX(0deg);
+  transition: all 100ms;
 }
 
-.dropdown-item {
+.dropdown > .menu > .item {
   margin: 0;
   padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
   user-select: none;
   cursor: pointer;
   transition: all 200ms;
 }
 
-.dropdown-item:hover {
-  background-color: var(--grey-tint-2);
+.dropdown > .menu > .item:hover {
+  background-color: var(--blue-tint-1);
   transition: all 200ms;
-}
-
-.dropdown-toggle {
-  width: min-content;
 }

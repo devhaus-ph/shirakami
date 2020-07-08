@@ -1,35 +1,55 @@
 import './styles.css'
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Button, Container } from '../../src'
 
 function Modal(props) {
-  const displayStatus = () => (props.display ? 'modal-active' : '')
-  const styleName = ['modal', displayStatus()].join(' ')
+  const VISIBLE = 'visible'
+  const [displayStatus, setDisplayStatus] = useState('')
+  const openModal = () => setDisplayStatus(VISIBLE)
+  const closeModal = () => setDisplayStatus('')
+  let modal = <>{openButton}</>
 
-  return (
-    <div className={styleName}>
-      <div className="container modal-container">
-        <Modal.Toggle />
-        {props.children}
-      </div>
-    </div>
+  const openButton = (
+    <Button variant="icon" icon={props.icon} onClick={openModal} />
   )
-}
 
-Modal.Toggle = (props) => (
-  <div className="modal-close-button" onClick={props.onClick}>
-    {props.children}
-  </div>
-)
+  const closeButton = (
+    <Button
+      onClick={closeModal}
+      className="close-button"
+      variant="icon"
+      icon="close"
+      iconSize={18}
+    />
+  )
+
+  if (displayStatus) {
+    modal = (
+      <div>
+        {openButton}
+        <div className="modal">
+          <Container>
+            {closeButton}
+            {props.children}
+          </Container>
+        </div>
+      </div>
+    )
+  } else {
+    modal = <>{openButton}</>
+  }
+
+  return modal
+}
 
 Modal.propTypes = {
   children: PropTypes.node,
-  display: PropTypes.bool,
+  icon: PropTypes.string,
 }
 
-Modal.Toggle.propTypes = {
-  children: PropTypes.node,
-  onClick: PropTypes.func,
+Modal.defaulProps = {
+  icon: 'filter',
 }
 
 export default Modal

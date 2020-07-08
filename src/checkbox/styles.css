@@ -5,26 +5,27 @@
   display: block;
   position: relative;
   width: 227px;
-  height: 1.25rem;
+  height: max-content;
   padding-left: 2.5rem;
   user-select: none;
   cursor: pointer;
 }
 
-.checkbox-label {
-  font-size: 1rem;
-  color: var(--grey-shade-3);
-  vertical-align: center;
+.label {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.4rem;
+  color: var(--grey-shade-1);
 }
 
-.checkbox .checkbox-input {
+.checkbox .input {
   position: absolute;
-  opacity: 0;
   width: 0;
   height: 0;
+  opacity: 0;
 }
 
-.checkbox-mark {
+.mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,13 +39,13 @@
 /*-----------
     Hover
 -----------*/
-.checkbox:hover .checkbox-input ~ .checkbox-mark {
+.checkbox:hover .input ~ .mark {
   border: 1px solid var(--grey-shade-3);
-  background-color: var(--grey-tint-3);
+  background-color: var(--light);
   transition: all 200ms;
 }
 
-.checkbox:hover .checkbox-input ~ .checkbox-label {
+.checkbox:hover .input ~ .label {
   color: var(--grey-shade-3);
   transition: all 200ms;
 }
@@ -52,13 +53,13 @@
 /*-----------
     Focus
 -----------*/
-.checkbox .checkbox-input:focus ~ .checkbox-mark {
+.checkbox .input:focus ~ .mark {
   border: 1px solid var(--blue);
-  background-color: var(--grey-tint-3);
+  background-color: var(--light);
   transition: all 200ms;
 }
 
-.checkbox .checkbox-input:focus ~ .checkbox-label {
+.checkbox .input:focus ~ .label {
   color: var(--grey-shade-3);
   transition: all 200ms;
 }
@@ -66,27 +67,26 @@
 /*-------------
     Checked
 -------------*/
-.checkbox .checkbox-input:checked ~ .checkbox-mark {
+.checkbox .input:checked ~ .mark {
   background-color: var(--white);
 }
 
-.checkbox .checkbox-input:checked ~ .checkbox-label {
+.checkbox .input:checked ~ .label {
   color: var(--grey-shade-3);
 }
 
-.checkbox .checkbox-input:checked ~ .checkbox-mark:after {
+.checkbox .input:checked ~ .mark:after {
   display: block;
 }
 
 /*------------
     Marker
 ------------*/
-.checkbox .checkbox-mark:after {
+.checkbox .mark:after {
   content: '';
   display: none;
   position: absolute;
-  top: 0.1rem;
-  left: 0.35rem;
+  left: 0.32rem;
   width: 0.5rem;
   height: 0.75rem;
   border-width: 0 2px 2px 0;

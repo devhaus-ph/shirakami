@@ -2,27 +2,26 @@ import './styles'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Content(props) {
+function Flex(props) {
   let styleName = [
     props.component,
     props.className,
     props.direction,
-    props.width,
+    props.fullwidth ? 'fullwidth' : '',
   ]
 
   styleName = styleName.join(' ').trim()
-
   return <div className={styleName}>{props.children}</div>
 }
 
-Content.propTypes = {
+Flex.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 }
 
-Content.defaultProps = {
-  component: 'content',
+Flex.defaultProps = {
+  component: 'flex',
   direction: 'column',
 }
 
-export default Content
+export default Flex
