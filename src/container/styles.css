@@ -1,3 +1,6 @@
+/*---------------
+    Container
+---------------*/
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -5,7 +8,7 @@
 }
 
 /*------------
-    Mobile
+    Tablet
 ------------*/
 @media (min-width: 640px) {
   .container {
@@ -14,7 +17,7 @@
 }
 
 /*------------
-    Tablet
+    Laptop
 ------------*/
 @media (min-width: 768px) {
   .container {
