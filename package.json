@@ -9,11 +9,7 @@
     "typeface-oxygen": "0.0.72"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
     "microbundle": "^0.12.2",
-    "parcel-bundler": "^1.12.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "rimraf": "^3.0.2"
   },
   "peerDependencies": {
@@ -21,9 +17,8 @@
     "react": "16.*"
   },
   "scripts": {
-    "start": "parcel docs/index.html --port 3000",
     "build": "microbundle --jsx=React.createElement --css-modules=false",
-    "clean": "rimraf dist .cache"
+    "clean": "rimraf dist"
   },
   "keywords": [
     "react",
