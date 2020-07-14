@@ -2,7 +2,6 @@
     Button
 ------------*/
 .button {
-  width: min-content;
   height: min-content;
   padding: 0.3rem 1.75rem;
   transition: all 100ms;

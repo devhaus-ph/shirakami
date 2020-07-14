@@ -21,7 +21,7 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.string.isRequired,
   className: PropTypes.string,
   icon: PropTypes.string,
   iconSize: PropTypes.number,
