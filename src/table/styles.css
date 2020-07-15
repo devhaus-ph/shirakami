@@ -15,7 +15,7 @@
   padding-right: 1rem;
 }
 
-.table-headercell:first-child {
+.table-headercell:first-of-type {
   padding-left: 1rem;
 }
 
@@ -39,7 +39,7 @@
   padding-right: 1rem;
 }
 
-.table-cell:first-child {
+.table-cell:first-of-type {
   padding-left: 1rem;
 }
 
