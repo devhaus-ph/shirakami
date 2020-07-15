@@ -3,10 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Form(props) {
-  const styleName = [props.component, props.className].join(' ').trim()
+  const styleName = ['form', props.className].join(' ').trim()
 
   return (
     <form className={styleName} onSubmit={props.onSubmit}>
+      <h2 className="title">{props.title}</h2>
+      <p className="description">{props.description}</p>
       {props.children}
     </form>
   )
@@ -15,28 +17,19 @@ function Form(props) {
 /*--------------------
     Sub Components
 --------------------*/
-Form.Title = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
-  return <h2 className={styleName}>{props.children}</h2>
+Form.Section = props => {
+  const styleName = ['section', props.className].join(' ').trim()
+
+  return (
+    <section className={styleName}>
+      <h3>{props.title}</h3>
+      {props.children}
+    </section>
+  )
 }
 
-Form.Description = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
-  return <label className={styleName}>{props.children}</label>
-}
-
-Form.Section = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
-  return <section className={styleName}>{props.children}</section>
-}
-
-Form.Label = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
-  return <h3 className={styleName}>{props.children}</h3>
-}
-
-Form.Footer = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
+Form.Footer = props => {
+  const styleName = ['footer', props.className].join(' ').trim()
   return <section className={styleName}>{props.children}</section>
 }
 
@@ -46,17 +39,9 @@ Form.Footer = (props) => {
 Form.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  description: PropTypes.string,
   onSubmit: PropTypes.func,
-}
-
-Form.Title.propTypes = {
-  children: PropTypes.string,
-  className: PropTypes.string,
-}
-
-Form.Description.propTypes = {
-  children: PropTypes.string,
-  className: PropTypes.string,
+  title: PropTypes.string,
 }
 
 Form.Section.propTypes = {
@@ -64,41 +49,9 @@ Form.Section.propTypes = {
   className: PropTypes.string,
 }
 
-Form.Label.propTypes = {
-  children: PropTypes.string,
-  className: PropTypes.string,
-}
-
 Form.Footer.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-}
-
-/*-------------------
-    Default Props
--------------------*/
-Form.defaultProps = {
-  component: 'form',
-}
-
-Form.Title.defaultProps = {
-  component: 'title',
-}
-
-Form.Description.defaultProps = {
-  component: 'description',
-}
-
-Form.Section.defaultProps = {
-  component: 'section',
-}
-
-Form.Label.defaultProps = {
-  component: 'label',
-}
-
-Form.Footer.defaultProps = {
-  component: 'footer',
 }
 
 export default Form

@@ -2,19 +2,22 @@
     Form
 ----------*/
 .form {
-  margin-bottom: 5rem;
+  width: max-content;
 }
 
 .form > .title {
+  margin-top: 0;
   margin-bottom: 0.25rem;
 }
 
 .form > .description {
+  margin-top: 0;
+  margin-bottom: 2rem;
   color: var(--grey-shade-1);
 }
 
 .form > .section {
-  margin: 4rem 0;
+  margin-bottom: 2rem;
 }
 
 .form > .section > .label {
@@ -22,10 +25,6 @@
   margin-bottom: 1rem;
 }
 
-.form > .footer {
-  margin-bottom: 4rem;
-}
-
-.form .footer > * {
+.form > .footer > * {
   margin-right: 2rem;
 }
