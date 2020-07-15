@@ -33,7 +33,7 @@ function Dropdown(props) {
   )
 }
 
-Dropdown.Item = (props) => {
+Dropdown.Item = props => {
   let styleName = [props.component, props.className].join(' ').trim()
   return (
     <dt className={styleName} onClick={props.onClick}>
@@ -47,14 +47,14 @@ Dropdown.Item = (props) => {
 ---------------*/
 Dropdown.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.node,
+  className: PropTypes.string,
   icon: PropTypes.string,
   iconSize: PropTypes.number,
 }
 
 Dropdown.Item.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.string,
   onClick: PropTypes.func,
 }
 
