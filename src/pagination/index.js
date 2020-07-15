@@ -4,80 +4,64 @@ import PropTypes from 'prop-types'
 
 function Pagination({ activePage, totalPages }) {
   const remainingPage = totalPages - activePage
+  const renderActive = <a className="item active">{activePage}</a>
+  const renderHidden = <div className="hidden"></div>
+  const renderEllipsis = <a className="ellipsis">...</a>
 
-  Pagination.First = () => {
-    if (activePage > 2) return <a className="item">1</a>
-    if (activePage <= 2) return <div className="hidden"></div>
+  function renderItem(children) {
+    return <a className="item">{children}</a>
   }
 
-  Pagination.FirstToPrevious = () => {
+  const first = () => {
+    if (activePage > 2) return renderItem(1)
+    if (activePage <= 2) return renderHidden
+  }
+
+  const firstToPrevious = () => {
     if (activePage > 3) {
-      if (activePage - 2 <= 2) {
-        return <a className="item">{activePage - 2}</a>
-      }
-      if (activePage - 2 >= 3) {
-        return <a className="ellipsis">...</a>
-      }
+      if (activePage - 2 <= 2) return renderItem(activePage - 2)
+      if (activePage - 2 >= 3) return renderEllipsis
     }
-    if (activePage <= 3) {
-      return <div className="hidden"></div>
-    }
+    if (activePage <= 3) return renderHidden
   }
 
-  Pagination.Previous = () => {
-    if (activePage >= 2) {
-      return <a className="item">{activePage - 1}</a>
-    }
-    if (activePage < 2) {
-      return <div className="hidden"></div>
-    }
+  const previous = () => {
+    if (activePage >= 2) return renderItem(activePage - 1)
+    if (activePage < 2) return renderHidden
   }
 
-  Pagination.Active = () => {
-    return <a className="item active">{activePage}</a>
+  const active = () => {
+    return renderActive
   }
 
-  Pagination.Next = () => {
-    if (remainingPage >= 1) {
-      return <a className="item">{activePage + 1}</a>
-    }
-    if (remainingPage < 1) {
-      return <div className="hidden"></div>
-    }
+  const next = () => {
+    if (remainingPage >= 1) return renderItem(activePage + 1)
+    if (remainingPage < 1) return renderHidden
   }
 
-  Pagination.NextToLast = () => {
+  const nextToLast = () => {
     if (remainingPage > 2) {
-      if (totalPages - (activePage + 1) <= 2) {
-        return <a className="item">{activePage + 2}</a>
-      }
-      if (totalPages - (activePage + 1) >= 3) {
-        return <a className="ellipsis">...</a>
-      }
+      let condition = totalPages - (activePage + 1)
+      if (condition <= 2) return renderItem(activePage + 2)
+      if (condition >= 3) return renderEllipsis
     }
-    if (remainingPage <= 2) {
-      return <div className="hidden"></div>
-    }
+    if (remainingPage <= 2) return renderHidden
   }
 
-  Pagination.Last = () => {
-    if (remainingPage > 1) {
-      return <a className="item">{totalPages}</a>
-    }
-    if (remainingPage <= 1) {
-      return <div className="hidden"></div>
-    }
+  const last = () => {
+    if (remainingPage > 1) return renderItem(totalPages)
+    if (remainingPage <= 1) return renderHidden
   }
 
   return (
     <div className="pagination">
-      <Pagination.First />
-      <Pagination.FirstToPrevious />
-      <Pagination.Previous />
-      <Pagination.Active />
-      <Pagination.Next />
-      <Pagination.NextToLast />
-      <Pagination.Last />
+      {first()}
+      {firstToPrevious()}
+      {previous()}
+      {active()}
+      {next()}
+      {nextToLast()}
+      {last()}
     </div>
   )
 }
