@@ -45,8 +45,6 @@ function Icon(props) {
 
 Icon.propTypes = {
   className: PropTypes.string,
-  height: PropTypes.number,
-  width: PropTypes.number,
   icon: PropTypes.oneOf([
     'add',
     'back',
@@ -61,7 +59,8 @@ Icon.propTypes = {
     'user',
     'power',
     'gear',
-  ]),
+  ]).isRequired,
+  iconSize: PropTypes.number,
 }
 
 Icon.defaultProps = {
