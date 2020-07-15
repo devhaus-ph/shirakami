@@ -4,28 +4,28 @@
 .checkbox {
   display: block;
   position: relative;
-  width: 227px;
   height: max-content;
+  width: 12rem;
   padding-left: 2.5rem;
   user-select: none;
   cursor: pointer;
 }
 
-.label {
+.checkbox > .label {
   margin-top: 0;
   margin-bottom: 0.75rem;
   line-height: 1.4rem;
   color: var(--grey-shade-1);
 }
 
-.checkbox .input {
+.checkbox > .input {
   position: absolute;
   width: 0;
   height: 0;
   opacity: 0;
 }
 
-.mark {
+.checkbox > .mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,27 +39,31 @@
 /*-----------
     Hover
 -----------*/
-.checkbox:hover .input ~ .mark {
+.checkbox:hover > .input ~ .mark {
   border: 1px solid var(--grey-shade-3);
   background-color: var(--light);
   transition: all 200ms;
 }
 
-.checkbox:hover .input ~ .label {
+.checkbox:hover > .input ~ .label {
   color: var(--grey-shade-3);
   transition: all 200ms;
+}
+
+.checkbox > .input:hover {
+  cursor: pointer;
 }
 
 /*-----------
     Focus
 -----------*/
-.checkbox .input:focus ~ .mark {
+.checkbox > .input:focus ~ .mark {
   border: 1px solid var(--blue);
   background-color: var(--light);
   transition: all 200ms;
 }
 
-.checkbox .input:focus ~ .label {
+.checkbox > .input:focus ~ .label {
   color: var(--grey-shade-3);
   transition: all 200ms;
 }
@@ -67,22 +71,22 @@
 /*-------------
     Checked
 -------------*/
-.checkbox .input:checked ~ .mark {
+.checkbox > .input:checked ~ .mark {
   background-color: var(--white);
 }
 
-.checkbox .input:checked ~ .label {
+.checkbox > .input:checked ~ .label {
   color: var(--grey-shade-3);
 }
 
-.checkbox .input:checked ~ .mark:after {
+.checkbox > .input:checked ~ .mark:after {
   display: block;
 }
 
 /*------------
     Marker
 ------------*/
-.checkbox .mark:after {
+.checkbox > .mark:after {
   content: '';
   display: none;
   position: absolute;

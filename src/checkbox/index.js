@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Checkbox(props) {
-  const styleName = [props.component, props.className].join(' ').trim()
+  const styleName = ['checkbox', props.className].join(' ').trim()
 
   return (
     <label className={styleName}>
@@ -17,10 +17,6 @@ function Checkbox(props) {
 Checkbox.propTypes = {
   children: PropTypes.string.isRequired,
   className: PropTypes.string,
-}
-
-Checkbox.defaultProps = {
-  component: 'checkbox',
 }
 
 export default Checkbox
