@@ -45,11 +45,7 @@ function Modal(props) {
 
 Modal.propTypes = {
   children: PropTypes.node,
-  icon: PropTypes.string,
-}
-
-Modal.defaulProps = {
-  icon: 'filter',
+  icon: PropTypes.string.isRequired,
 }
 
 export default Modal
