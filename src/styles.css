@@ -48,6 +48,8 @@ html {
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1,
@@ -61,4 +63,49 @@ h6 {
 
 .hidden {
   display: none;
+}
+
+/*---------------
+    Container
+---------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/*------------
+    Tablet
+------------*/
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/*------------
+    Laptop
+------------*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/*-------------
+    Desktop
+-------------*/
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/*----------------
+    Widescreen
+----------------*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }

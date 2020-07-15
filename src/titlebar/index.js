@@ -1,15 +1,14 @@
 import './styles.css'
 import React from 'react'
 import PropTypes from 'prop-types'
-import Container from '../container'
 
 function Titlebar(props) {
-  const styleName = [props.component, props.className].join(' ').trim()
+  const styleName = ['titlebar', 'container', props.className].join(' ').trim()
   return (
-    <Container className={styleName}>
+    <div className={styleName}>
       <span className="titlebar-abbr">{props.abbr}</span>
       <span className="titlebar-title">{props.children}</span>
-    </Container>
+    </div>
   )
 }
 

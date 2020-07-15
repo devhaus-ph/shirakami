@@ -2,7 +2,6 @@ import './styles.css'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button'
-import Container from '../container'
 
 function Modal(props) {
   const VISIBLE = 'visible'
@@ -30,10 +29,10 @@ function Modal(props) {
       <div>
         {openButton}
         <div className="modal">
-          <Container>
+          <div className="container">
             {closeButton}
             {props.children}
-          </Container>
+          </div>
         </div>
       </div>
     )
