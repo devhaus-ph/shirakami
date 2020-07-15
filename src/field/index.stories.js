@@ -2,7 +2,7 @@ import React from 'react'
 import { Field, Input } from '../'
 
 export default {
-  title: 'Components/Field',
+  title: 'Layouts/Field',
   component: Field,
 }
 
