@@ -2,10 +2,12 @@
     Sidebar
 -------------*/
 .sidebar {
+  margin: 0;
+  max-width: 200px;
   z-index: 10;
 }
 
-.sidebar-content {
+.sidebar > .content {
   display: none;
   position: absolute;
   top: 0;
@@ -15,22 +17,23 @@
   background-color: rgba(255, 255, 255, 95%);
 }
 
-.sidebar-content.active {
+.sidebar > .content.active {
   display: block;
 }
 
-.sidebar-menu {
+.sidebar > .menu {
   margin-top: 0;
 }
 
-.sidebar-label {
+.sidebar > .content > .menu > .label {
   display: block;
   font-size: 0.75rem;
-  margin-bottom: 0.25rem;
+  padding-bottom: 0.25rem;
   color: var(--grey);
 }
 
-.sidebar-item {
+.sidebar > .content > .item,
+.sidebar > .content > .menu .item {
   padding: 0.5rem 1rem;
   margin-bottom: 0.25rem;
   border-radius: 0.125rem;
@@ -38,12 +41,13 @@
   transition: all 200ms;
 }
 
-.sidebar-item:hover {
+.sidebar > .content > .item:hover,
+.sidebar > .content > .menu .item:hover {
   background-color: var(--grey-tint-3);
   transition: all 200ms;
 }
 
-.sidebar-footer {
+.sidebar > .footer {
   display: flex;
   justify-content: space-around;
   position: fixed;
@@ -60,25 +64,23 @@
 ------------*/
 @media (min-width: 640px) {
   .sidebar {
-    position: static;
-    width: 275px;
-    border-right: 1px solid var(--light);
-    margin-top: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .sidebar-content {
+  .sidebar > .content {
     display: block;
     position: static;
     padding: 1rem 0 0 0;
   }
 
-  .sidebar-item {
+  .sidebar > .item,
+  .sidebar > .menu > .item {
     border-radius: 0.25rem 0 0 0.25rem;
   }
 
-  .sidebar-footer {
+  .sidebar > .footer {
     display: none;
   }
 }

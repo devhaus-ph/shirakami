@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 
 function Sidebar(props) {
-  const styleName = [props.component, props.className].join(' ').trim()
+  const styleName = ['sidebar', props.className].join(' ').trim()
   const [displayStatus, setDisplayStatus] = useState('')
   const openSidebar = () => setDisplayStatus('active')
   const closeSidebar = () => setDisplayStatus('')
@@ -12,29 +12,25 @@ function Sidebar(props) {
   let sidebarFooter
   if (displayStatus) {
     sidebarFooter = (
-      <div className="sidebar-footer">
+      <React.Fragment>
         <Button variant="text">Logout</Button>
         <Button onClick={closeSidebar} variant="text">
           Close
         </Button>
-      </div>
+      </React.Fragment>
     )
   } else {
     sidebarFooter = (
-      <div className="sidebar-footer">
-        <Button onClick={openSidebar} variant="text">
-          Menu
-        </Button>
-      </div>
+      <Button onClick={openSidebar} variant="text">
+        Menu
+      </Button>
     )
   }
 
   return (
     <aside className={styleName}>
-      <div className={`sidebar-content ${displayStatus}`.trim()}>
-        {props.children}
-      </div>
-      {sidebarFooter}
+      <div className={`content ${displayStatus}`.trim()}>{props.children}</div>
+      <div className="footer">{sidebarFooter}</div>
     </aside>
   )
 }
@@ -42,18 +38,18 @@ function Sidebar(props) {
 /*----------------
     Components
 ----------------*/
-Sidebar.Menu = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
-  return <dl className={styleName}>{props.children}</dl>
+Sidebar.Menu = props => {
+  const styleName = ['menu', props.className].join(' ').trim()
+  return (
+    <dl className={styleName}>
+      <label className="label">{props.label}</label>
+      {props.children}
+    </dl>
+  )
 }
 
-Sidebar.Label = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
-  return <label className={styleName}>{props.children}</label>
-}
-
-Sidebar.Item = (props) => {
-  const styleName = [props.component, props.className].join(' ').trim()
+Sidebar.Item = props => {
+  const styleName = ['item', props.className].join(' ').trim()
   return <dt className={styleName}>{props.children}</dt>
 }
 
@@ -61,43 +57,19 @@ Sidebar.Item = (props) => {
     PropTypes
 ---------------*/
 Sidebar.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 }
 
 Sidebar.Menu.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   label: PropTypes.string,
 }
 
-Sidebar.Label.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-}
-
 Sidebar.Item.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-}
-
-/*-------------------
-    Deafult Props
--------------------*/
-Sidebar.defaultProps = {
-  component: 'sidebar',
-}
-
-Sidebar.Menu.defaultProps = {
-  component: 'sidebar-menu',
-}
-
-Sidebar.Label.defaultProps = {
-  component: 'sidebar-label',
-}
-
-Sidebar.Item.defaultProps = {
-  component: 'sidebar-item',
 }
 
 export default Sidebar
