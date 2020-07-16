@@ -7,14 +7,12 @@ function Select(props) {
   return (
     <div className="select">
       <select className="select-element">{props.children}</select>
-      <span className="select-icon">
-        <Icon icon="down" />
-      </span>
+      <span className="select-icon" />
     </div>
   )
 }
 
-Select.Option = (props) => (
+Select.Option = props => (
   <option disabled={props.disabled} value={props.value}>
     {props.children}
   </option>

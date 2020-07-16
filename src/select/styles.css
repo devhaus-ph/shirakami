@@ -1,3 +1,6 @@
+/*------------
+    Select
+------------*/
 .select {
   display: flex;
   position: relative;
@@ -46,10 +49,24 @@
 .select-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
   right: 0;
   height: 26px;
+  width: 26px;
   border-left: 1px solid var(--light);
   z-index: 1;
   transition: all 200ms;
+}
+
+.select-icon::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: var(--grey-shade-3);
+  transform: rotate(45deg);
 }
