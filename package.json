@@ -5,6 +5,8 @@
   "main": "dist/shirakami.js",
   "module": "dist/shirakami.esm.js",
   "dependencies": {
+    "autoprefixer": "^9.8.5",
+    "postcss-modules": "^3.2.0",
     "sanitize.css": "^11.0.1",
     "typeface-oxygen": "0.0.72"
   },
