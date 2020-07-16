@@ -3,22 +3,9 @@
 -------------*/
 .toolbar {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.toolbar.row {
-  flex-direction: row;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.toolbar.row > * {
-  margin-right: 2.5rem;
-}
-
-.toolbar.column {
-  flex-direction: column;
-}
-
-.toolbar.toolbar.column > * {
-  margin-bottom: 2.5rem;
+.toolbar > * {
+  margin: 1rem;
 }
