@@ -10,32 +10,38 @@ function Table(props) {
   )
 }
 
-Table.Header = (props) => (
+/*--------------------
+    Sub Components
+--------------------*/
+Table.Header = props => (
   <thead className={`table-header ${props.className}`.trim()}>
     {props.children}
   </thead>
 )
 
-Table.Body = (props) => (
+Table.Body = props => (
   <tbody className={`table-body ${props.className}`.trim()}>
     {props.children}
   </tbody>
 )
 
-Table.HeaderCell = (props) => (
+Table.HeaderCell = props => (
   <th className={`table-headercell ${props.className}`.trim()}>
     {props.children}
   </th>
 )
 
-Table.Row = (props) => (
+Table.Row = props => (
   <tr className={`table-row ${props.className}`.trim()}>{props.children}</tr>
 )
 
-Table.Cell = (props) => (
+Table.Cell = props => (
   <td className={`table-cell ${props.className}`.trim()}>{props.children}</td>
 )
 
+/*----------------
+    Prop Types
+----------------*/
 Table.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
@@ -66,6 +72,9 @@ Table.Cell.propTypes = {
   className: PropTypes.string,
 }
 
+/*-------------------
+    Default Props
+-------------------*/
 Table.defaultProps = {
   className: '',
 }
