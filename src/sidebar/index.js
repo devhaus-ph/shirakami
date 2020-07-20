@@ -9,23 +9,18 @@ function Sidebar(props) {
   const openSidebar = () => setDisplayStatus('active')
   const closeSidebar = () => setDisplayStatus('')
 
-  let sidebarFooter
-  if (displayStatus) {
-    sidebarFooter = (
-      <React.Fragment>
-        <Button variant="text">Logout</Button>
-        <Button onClick={closeSidebar} variant="text">
-          Close
-        </Button>
-      </React.Fragment>
-    )
-  } else {
-    sidebarFooter = (
-      <Button onClick={openSidebar} variant="text">
-        Menu
+  let sidebarFooter = displayStatus ? (
+    <React.Fragment>
+      <Button variant="text">Logout</Button>
+      <Button onClick={closeSidebar} variant="text">
+        Close
       </Button>
-    )
-  }
+    </React.Fragment>
+  ) : (
+    <Button onClick={openSidebar} variant="text">
+      Menu
+    </Button>
+  )
 
   return (
     <aside className={styleName}>
@@ -40,9 +35,11 @@ function Sidebar(props) {
 ----------------*/
 Sidebar.Menu = props => {
   const styleName = ['menu', props.className].join(' ').trim()
+  let label = props.label && <label className="label">{props.label}</label>
+
   return (
     <dl className={styleName}>
-      <label className="label">{props.label}</label>
+      {label}
       {props.children}
     </dl>
   )
