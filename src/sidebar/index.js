@@ -9,7 +9,7 @@ function Sidebar(props) {
   const openSidebar = () => setDisplayStatus('active')
   const closeSidebar = () => setDisplayStatus('')
 
-  let sidebarFooter = displayStatus ? (
+  let sidebarMobileMenu = displayStatus ? (
     <React.Fragment>
       <Button variant="text">Logout</Button>
       <Button onClick={closeSidebar} variant="text">
@@ -25,7 +25,7 @@ function Sidebar(props) {
   return (
     <aside className={styleName}>
       <div className={`content ${displayStatus}`.trim()}>{props.children}</div>
-      <div className="footer">{sidebarFooter}</div>
+      <div className="mobile-menu">{sidebarMobileMenu}</div>
     </aside>
   )
 }
@@ -46,7 +46,8 @@ Sidebar.Menu = props => {
 }
 
 Sidebar.Item = props => {
-  const styleName = ['item', props.className].join(' ').trim()
+  const active = props.active ? 'active' : ''
+  const styleName = ['item', active, props.className].join(' ').trim()
   return <dt className={styleName}>{props.children}</dt>
 }
 
@@ -65,6 +66,7 @@ Sidebar.Menu.propTypes = {
 }
 
 Sidebar.Item.propTypes = {
+  active: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 }

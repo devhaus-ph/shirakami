@@ -3,10 +3,13 @@
 -------------*/
 .sidebar {
   margin: 0;
-  max-width: 200px;
+  min-width: 200px;
   z-index: 10;
 }
 
+/*-------------
+    Content
+-------------*/
 .sidebar > .content {
   display: none;
   position: absolute;
@@ -21,10 +24,18 @@
   display: block;
 }
 
-.sidebar > .menu {
-  margin-top: 0;
+/*----------
+    Menu
+----------*/
+.sidebar > .content > .menu {
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
+/*-----------
+    Label
+-----------*/
 .sidebar > .content > .menu > .label {
   display: block;
   font-size: 0.75rem;
@@ -32,22 +43,38 @@
   color: var(--grey);
 }
 
+/*----------
+    Item
+----------*/
 .sidebar > .content > .item,
 .sidebar > .content > .menu .item {
   padding: 0.5rem 1rem;
-  margin-bottom: 0.25rem;
   border-radius: 0.125rem;
   cursor: pointer;
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
+.sidebar > .content > .item.active,
+.sidebar > .content > .menu .item.active {
+  background-color: var(--grey-shade-3);
+  color: var(--white);
+}
+
+/*----------------
+    Hover Item
+----------------*/
 .sidebar > .content > .item:hover,
 .sidebar > .content > .menu .item:hover {
-  background-color: var(--grey-tint-3);
-  transition: all 200ms;
+  background-color: var(--light);
+  transition: all 200ms ease;
 }
 
-.sidebar > .footer {
+.sidebar > .content > .item.active:hover,
+.sidebar > .content > .menu .item.active:hover {
+  color: var(--grey-shade-3);
+}
+
+.sidebar > .mobile-menu {
   display: flex;
   justify-content: space-around;
   position: fixed;
@@ -64,6 +91,7 @@
 ------------*/
 @media (min-width: 640px) {
   .sidebar {
+    width: 200px;
     padding-right: 1rem;
   }
 
@@ -73,12 +101,7 @@
     padding: 0;
   }
 
-  .sidebar > .item,
-  .sidebar > .menu > .item {
-    border-radius: 0.25rem 0 0 0.25rem;
-  }
-
-  .sidebar > .footer {
+  .sidebar > .mobile-menu {
     display: none;
   }
 }
