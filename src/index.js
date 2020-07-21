@@ -3,6 +3,7 @@ import './styles.css'
 
 export { default as Button } from './button'
 export { default as Checkbox } from './checkbox'
+export { default as Container } from './container'
 export { default as Dropdown } from './dropdown'
 export { default as Field } from './field'
 export { default as Form } from './form'
