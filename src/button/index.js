@@ -4,17 +4,15 @@ import PropTypes from 'prop-types'
 import Icon from '../icon'
 
 function Button(props) {
-  let styleName = [props.component, props.className, props.variant]
-  styleName = styleName.join(' ').trim()
+  let className = ['button', props.variant, props.className]
+  let btnIcon = <div className="hidden" />
 
-  let buttonIcon = <div className="hidden"></div>
-  if (props.icon) {
-    buttonIcon = <Icon icon={props.icon} iconSize={props.iconSize} />
-  }
+  className = className.join(' ').trim()
+  btnIcon = props.icon && <Icon icon={props.icon} iconSize={props.iconSize} />
 
   return (
-    <button className={styleName} onClick={props.onClick} title={props.title}>
-      {buttonIcon}
+    <button className={className} onClick={props.onClick} title={props.title}>
+      {btnIcon}
       {props.children}
     </button>
   )
@@ -32,8 +30,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   className: '',
-  component: 'button',
-  icon: '',
   iconSize: 24,
   variant: 'solid',
 }

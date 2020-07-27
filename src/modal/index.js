@@ -4,13 +4,12 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 
 function Modal(props) {
-  const VISIBLE = 'visible'
-  const [displayStatus, setDisplayStatus] = useState('')
-  const openModal = () => setDisplayStatus(VISIBLE)
-  const closeModal = () => setDisplayStatus('')
-  let modal = <>{openButton}</>
+  const [visibility, setVisibility] = useState(false)
+  const openModal = () => setVisibility(true)
+  const closeModal = () => setVisibility(false)
+  let modal = <>{btnOpenModal}</>
 
-  const openButton = (
+  const btnOpenModal = (
     <Button variant="icon" icon={props.icon} onClick={openModal} />
   )
 
@@ -24,10 +23,10 @@ function Modal(props) {
     />
   )
 
-  if (displayStatus) {
+  if (visibility) {
     modal = (
       <div>
-        {openButton}
+        {btnOpenModal}
         <div className="modal">
           <div className="container">
             {closeButton}
@@ -37,7 +36,7 @@ function Modal(props) {
       </div>
     )
   } else {
-    modal = <>{openButton}</>
+    modal = <>{btnOpenModal}</>
   }
 
   return modal

@@ -14,30 +14,33 @@ function Table(props) {
     Sub Components
 --------------------*/
 Table.Header = props => (
-  <thead className={`table-header ${props.className}`.trim()}>
-    {props.children}
-  </thead>
+  <thead className={`header ${props.className}`.trim()}>{props.children}</thead>
 )
 
 Table.Body = props => (
-  <tbody className={`table-body ${props.className}`.trim()}>
-    {props.children}
-  </tbody>
+  <tbody className={`body ${props.className}`.trim()}>{props.children}</tbody>
 )
 
-Table.HeaderCell = props => (
-  <th className={`table-headercell ${props.className}`.trim()}>
-    {props.children}
-  </th>
-)
+Table.HeaderCell = props => {
+  const textRight = props.textRight && 'right'
+  const className = ['headercell', textRight, props.className].join(' ').trim()
+
+  return (
+    <th className={className} title={props.title}>
+      {props.children}
+    </th>
+  )
+}
 
 Table.Row = props => (
-  <tr className={`table-row ${props.className}`.trim()}>{props.children}</tr>
+  <tr className={`row ${props.className}`.trim()}>{props.children}</tr>
 )
 
-Table.Cell = props => (
-  <td className={`table-cell ${props.className}`.trim()}>{props.children}</td>
-)
+Table.Cell = props => {
+  const textRight = props.textRight && 'right'
+  const className = ['cell', textRight, props.className].join(' ').trim()
+  return <td className={className}>{props.children}</td>
+}
 
 /*----------------
     Prop Types
@@ -60,6 +63,8 @@ Table.Body.propTypes = {
 Table.HeaderCell.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  textRight: PropTypes.string,
+  title: PropTypes.string,
 }
 
 Table.Row.propTypes = {
@@ -70,33 +75,6 @@ Table.Row.propTypes = {
 Table.Cell.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-}
-
-/*-------------------
-    Default Props
--------------------*/
-Table.defaultProps = {
-  className: '',
-}
-
-Table.Header.defaultProps = {
-  className: '',
-}
-
-Table.Body.defaultProps = {
-  className: '',
-}
-
-Table.HeaderCell.defaultProps = {
-  className: '',
-}
-
-Table.Row.defaultProps = {
-  className: '',
-}
-
-Table.Cell.defaultProps = {
-  className: '',
 }
 
 export default Table

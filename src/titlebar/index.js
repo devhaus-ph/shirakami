@@ -3,9 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Titlebar(props) {
-  const styleName = ['titlebar', 'container', props.className].join(' ').trim()
+  const className = ['titlebar', 'container', props.className].join(' ').trim()
+
   return (
-    <div className={styleName}>
+    <div className={className}>
       <span className="abbr">{props.abbr}</span>
       <span className="title">{props.children}</span>
     </div>
@@ -17,4 +18,5 @@ Titlebar.propTypes = {
   className: PropTypes.string,
   children: PropTypes.string.isRequired,
 }
+
 export default Titlebar

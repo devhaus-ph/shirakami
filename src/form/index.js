@@ -3,12 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Form(props) {
-  const styleName = ['form', props.className].join(' ').trim()
+  const className = ['form', props.className].join(' ').trim()
 
   return (
-    <form className={styleName} onSubmit={props.onSubmit}>
+    <form className={className} onSubmit={props.onSubmit}>
       <h2 className="title">{props.title}</h2>
-      <p className="description">{props.description}</p>
+      <p className="desc">{props.desc}</p>
       {props.children}
     </form>
   )
@@ -18,10 +18,10 @@ function Form(props) {
     Sub Components
 --------------------*/
 Form.Section = props => {
-  const styleName = ['section', props.className].join(' ').trim()
+  const className = ['section', props.className].join(' ').trim()
 
   return (
-    <section className={styleName}>
+    <section className={className}>
       <h3>{props.title}</h3>
       {props.children}
     </section>
@@ -29,17 +29,17 @@ Form.Section = props => {
 }
 
 Form.Footer = props => {
-  const styleName = ['footer', props.className].join(' ').trim()
-  return <section className={styleName}>{props.children}</section>
+  const className = ['footer', props.className].join(' ').trim()
+  return <section className={className}>{props.children}</section>
 }
 
-/*---------------
-    PropTypes
----------------*/
+/*----------------
+    Prop Types
+----------------*/
 Form.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  description: PropTypes.string,
+  desc: PropTypes.string,
   onSubmit: PropTypes.func,
   title: PropTypes.string,
 }
@@ -47,6 +47,7 @@ Form.propTypes = {
 Form.Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  title: PropTypes.string,
 }
 
 Form.Footer.propTypes = {

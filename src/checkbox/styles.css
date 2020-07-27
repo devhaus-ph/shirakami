@@ -33,7 +33,7 @@
   height: 1.25rem;
   border: 1px solid var(--grey);
   background-color: var(--white);
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
 /*-----------
@@ -42,12 +42,12 @@
 .checkbox:hover > .input ~ .mark {
   border: 1px solid var(--grey-shade-3);
   background-color: var(--light);
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
 .checkbox:hover > .input ~ .label {
   color: var(--grey-shade-3);
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
 .checkbox > .input:hover {
@@ -60,12 +60,12 @@
 .checkbox > .input:focus ~ .mark {
   border: 1px solid var(--blue);
   background-color: var(--light);
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
 .checkbox > .input:focus ~ .label {
   color: var(--grey-shade-3);
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
 /*-------------

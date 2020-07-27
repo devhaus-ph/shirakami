@@ -4,7 +4,7 @@
 .button {
   height: min-content;
   padding: 0.3rem 1.75rem;
-  transition: all 100ms;
+  transition: all 100ms ease;
   cursor: pointer;
   outline: none;
 }

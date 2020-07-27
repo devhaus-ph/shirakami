@@ -3,12 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Flex(props) {
-  const column = props.column ? 'column' : ''
-  const fullwidth = props.fullwidth ? 'fullwidth' : ''
-  let styleName = ['flex', column, fullwidth, props.className]
-  styleName = styleName.join(' ').trim()
-
-  return <div className={styleName}>{props.children}</div>
+  const col = props.column && 'column'
+  const fullwidth = props.fullwidth && 'fullwidth'
+  const className = ['flex', col, fullwidth, props.className].join(' ').trim()
+  return <div className={className}>{props.children}</div>
 }
 
 Flex.propTypes = {

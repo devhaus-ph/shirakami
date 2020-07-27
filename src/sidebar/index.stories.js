@@ -9,18 +9,18 @@ export default {
 export const basic = () => (
   <Sidebar>
     <Sidebar.Menu label="Menu">
-      <Sidebar.Item active>Dashboard</Sidebar.Item>
-      <Sidebar.Item>Users</Sidebar.Item>
+      <a className="active">Dashboard</a>
+      <a>Users</a>
     </Sidebar.Menu>
 
     <Sidebar.Menu label="Social Profile">
-      <Sidebar.Item>Individuals</Sidebar.Item>
-      <Sidebar.Item>Communities</Sidebar.Item>
+      <a>Individuals</a>
+      <a>Communities</a>
     </Sidebar.Menu>
 
     <Sidebar.Menu label="Others">
-      <Sidebar.Item>DRR Management</Sidebar.Item>
-      <Sidebar.Item>Map Location</Sidebar.Item>
+      <a>DRR Management</a>
+      <a>Q-PHN Map</a>
     </Sidebar.Menu>
   </Sidebar>
 )

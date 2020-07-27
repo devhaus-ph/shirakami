@@ -21,7 +21,7 @@
   background-color: rgba(255, 255, 255, 95%);
 }
 
-.sidebar > .content.active {
+.sidebar > .content.show {
   display: block;
 }
 
@@ -47,16 +47,15 @@
 /*----------
     Item
 ----------*/
-.sidebar > .content > .item,
-.sidebar > .content > .menu .item {
+.sidebar > .content > .menu > a {
+  display: block;
   padding: 0.5rem 1rem;
   border-radius: 0.125rem;
   cursor: pointer;
   transition: all 200ms ease;
 }
 
-.sidebar > .content > .item.active,
-.sidebar > .content > .menu .item.active {
+.sidebar > .content > .menu > a.active {
   background-color: var(--grey-shade-3);
   color: var(--white);
 }
@@ -64,14 +63,12 @@
 /*----------------
     Hover Item
 ----------------*/
-.sidebar > .content > .item:hover,
-.sidebar > .content > .menu .item:hover {
+.sidebar > .content > .menu > a:hover {
   background-color: var(--light);
   transition: all 200ms ease;
 }
 
-.sidebar > .content > .item.active:hover,
-.sidebar > .content > .menu .item.active:hover {
+.sidebar > .content > .menu a.active:hover {
   color: var(--grey-shade-3);
 }
 

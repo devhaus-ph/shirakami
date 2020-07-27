@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import Add from './add'
 import Back from './back'
 import Close from './close'

@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 
 function Dropdown(props) {
-  const VISIBLE = 'menu-active'
   const refToggleButton = useRef()
-  const [displayStatus, setDisplayStatus] = useState('')
-  const openDropdownMenu = () => setDisplayStatus(VISIBLE)
-  const closeDropdownMenu = () => setDisplayStatus('')
+  const [visibility, setVisibility] = useState(false)
+  const openDropdownMenu = () => setVisibility(true)
+  const closeDropdownMenu = () => setVisibility(false)
+  let className = ['menu', visibility ? 'show' : ''].join(' ').trim()
 
   function toggleDropdownMenu() {
-    displayStatus !== VISIBLE ? openDropdownMenu() : closeDropdownMenu()
+    visibility ? closeDropdownMenu() : openDropdownMenu()
   }
 
   function handleClickOutside(e) {
@@ -21,30 +21,34 @@ function Dropdown(props) {
   useEffect(() => {
     document.body.addEventListener('click', handleClickOutside)
     return () => document.body.removeEventListener('click', handleClickOutside)
-  }, [displayStatus])
+  }, [visibility])
 
   return (
     <div className="dropdown">
       <div ref={refToggleButton} onClick={toggleDropdownMenu}>
         <Button variant="icon" icon={props.icon} iconSize={props.iconSize} />
       </div>
-      <dl className={`menu ${displayStatus}`}>{props.children}</dl>
+      <dl className={className}>{props.children}</dl>
     </div>
   )
 }
 
+/*-------------------
+    Sub Component
+-------------------*/
 Dropdown.Item = props => {
-  let styleName = [props.component, props.className].join(' ').trim()
+  let className = ['item', props.className].join(' ').trim()
+
   return (
-    <dt className={styleName} onClick={props.onClick}>
+    <dt className={className} onClick={props.onClick}>
       {props.children}
     </dt>
   )
 }
 
-/*---------------
-    PropTypes
----------------*/
+/*----------------
+    Prop Types
+----------------*/
 Dropdown.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
@@ -64,10 +68,6 @@ Dropdown.Item.propTypes = {
 Dropdown.defaultProps = {
   icon: 'more',
   iconSize: 18,
-}
-
-Dropdown.Item.defaultProps = {
-  component: 'item',
 }
 
 export default Dropdown

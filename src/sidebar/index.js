@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 
 function Sidebar(props) {
-  const styleName = ['sidebar', props.className].join(' ').trim()
-  const [displayStatus, setDisplayStatus] = useState('')
-  const openSidebar = () => setDisplayStatus('active')
-  const closeSidebar = () => setDisplayStatus('')
+  const className = ['sidebar', props.className].join(' ').trim()
+  const [visibility, setVisibility] = useState('')
+  const openSidebar = () => setVisibility('show')
+  const closeSidebar = () => setVisibility('')
 
-  let sidebarMobileMenu = displayStatus ? (
+  let sidebarMobileMenu = visibility ? (
     <React.Fragment>
       <Button variant="text">Logout</Button>
       <Button onClick={closeSidebar} variant="text">
@@ -23,8 +23,8 @@ function Sidebar(props) {
   )
 
   return (
-    <aside className={styleName}>
-      <div className={`content ${displayStatus}`.trim()}>{props.children}</div>
+    <aside className={className}>
+      <div className={`content ${visibility}`.trim()}>{props.children}</div>
       <div className="mobile-menu">{sidebarMobileMenu}</div>
     </aside>
   )
@@ -34,21 +34,15 @@ function Sidebar(props) {
     Components
 ----------------*/
 Sidebar.Menu = props => {
-  const styleName = ['menu', props.className].join(' ').trim()
-  let label = props.label && <label className="label">{props.label}</label>
+  const className = ['menu', props.className].join(' ').trim()
+  const label = props.label && <label className="label">{props.label}</label>
 
   return (
-    <dl className={styleName}>
+    <dl className={className}>
       {label}
       {props.children}
     </dl>
   )
-}
-
-Sidebar.Item = props => {
-  const active = props.active ? 'active' : ''
-  const styleName = ['item', active, props.className].join(' ').trim()
-  return <dt className={styleName}>{props.children}</dt>
 }
 
 /*---------------
@@ -63,12 +57,6 @@ Sidebar.Menu.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   label: PropTypes.string,
-}
-
-Sidebar.Item.propTypes = {
-  active: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 }
 
 export default Sidebar

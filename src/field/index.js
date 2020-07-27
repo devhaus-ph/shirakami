@@ -3,9 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Field(props) {
-  const styleName = ['field', props.className].join(' ').trim()
+  const className = ['field', props.className].join(' ').trim()
+
   return (
-    <div className={styleName}>
+    <div className={className}>
       <label className="label">{props.label}</label>
       {props.children}
       <label className="message">{props.message}</label>
@@ -13,9 +14,6 @@ function Field(props) {
   )
 }
 
-/*----------------
-    Prop Types
-----------------*/
 Field.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,

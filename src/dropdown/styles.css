@@ -1,7 +1,6 @@
 /*--------------
     Dropdown
 --------------*/
-
 .dropdown {
   width: min-content;
 }
@@ -20,7 +19,7 @@
   transition: all 100ms;
 }
 
-.dropdown > .menu-active {
+.dropdown > .menu.show {
   opacity: 100;
   transform: rotateX(0deg);
   transition: all 100ms;

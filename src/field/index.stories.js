@@ -13,7 +13,7 @@ export const basic = () => (
 )
 
 export const withMessage = () => (
-  <Field label="Nameg" message="This field is required">
-    <Input />
+  <Field label="Birthday" message="This field is required">
+    <Input type="date" />
   </Field>
 )

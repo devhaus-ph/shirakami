@@ -3,10 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Checkbox(props) {
-  const styleName = ['checkbox', props.className].join(' ').trim()
+  const className = ['checkbox', props.className].join(' ').trim()
 
   return (
-    <label className={styleName}>
+    <label className={className}>
       <input className="input" type="checkbox" />
       <p className="label">{props.children}</p>
       <span className="mark" />

@@ -6,46 +6,50 @@
   border-collapse: collapse;
 }
 
-.table-header {
+.table > .header {
   border-bottom: 1px solid var(--grey);
   color: var(--grey);
   text-align: left;
 }
 
-.table-headercell {
+.row > .headercell {
   font-weight: 400;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.table-headercell:first-of-type {
+.row > .headercell:first-of-type {
   padding-left: 1rem;
 }
 
-.table-headercell:last-child {
+.row > .headercell:last-child {
   padding-right: 1rem;
 }
 
-.table-row {
+.table .row {
   height: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.table-row:nth-child(even) {
+.table .row:nth-child(even) {
   background-color: var(--light);
 }
 
-.table-cell {
+.row > .cell {
   text-transform: capitalize;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.table-cell:first-of-type {
+.row > .cell:first-of-type {
   padding-left: 1rem;
 }
 
-.table-cell:last-child {
+.row > .cell:last-child {
   padding-right: 1rem;
+}
+
+.table .right {
+  text-align: right;
 }
