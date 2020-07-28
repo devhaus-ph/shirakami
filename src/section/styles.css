@@ -1,0 +1,21 @@
+/*-------------
+    Section
+-------------*/
+.section {
+  padding-bottom: 1rem;
+}
+
+.section > .title {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.section > .item {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.section > .item > .label {
+  display: block;
+  color: var(--grey);
+}
