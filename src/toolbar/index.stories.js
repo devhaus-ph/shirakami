@@ -8,7 +8,7 @@ export default {
 
 export const basic = () => (
   <Toolbar>
-    <Button variant="icon" icon="add" />
+    <Button variant="icon" icon="plus" />
     <Button variant="icon" icon="filter" />
     <Button variant="icon" icon="download" />
   </Toolbar>

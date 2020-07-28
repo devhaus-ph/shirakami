@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Add(props) {
+function Plus(props) {
   return (
     <svg
       className={props.className}
@@ -27,8 +27,8 @@ function Add(props) {
   )
 }
 
-Add.propTypes = {
+Plus.propTypes = {
   className: PropTypes.string,
 }
 
-export default Add
+export default Plus
