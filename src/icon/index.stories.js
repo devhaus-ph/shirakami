@@ -6,7 +6,7 @@ export default {
   component: Icon,
 }
 
-export const back = () => <Icon icon="back" />
+export const arrowLeft = () => <Icon icon="arrow-left" />
 export const close = () => <Icon icon="close" />
 export const down = () => <Icon icon="down" />
 export const download = () => <Icon icon="download" />

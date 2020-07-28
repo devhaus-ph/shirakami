@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Back(props) {
+function arrowLeft(props) {
   return (
     <svg
       className={props.className}
@@ -27,8 +27,8 @@ function Back(props) {
   )
 }
 
-Back.propTypes = {
+arrowLeft.propTypes = {
   className: PropTypes.string,
 }
 
-export default Back
+export default arrowLeft

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Plus from './plus'
-import Back from './back'
+import ArrowLeft from './arrowLeft'
 import Close from './close'
 import Down from './down'
 import Download from './download'
@@ -16,19 +16,19 @@ import Gear from './gear'
 
 function Icon(props) {
   const icons = {
-    back: Back,
-    close: Close,
-    down: Down,
-    download: Download,
-    edit: Edit,
-    filter: Filter,
-    more: More,
-    plus: Plus,
-    refresh: Refresh,
-    save: Save,
-    user: User,
-    power: Power,
-    gear: Gear,
+    'arrow-left': ArrowLeft,
+    'close': Close,
+    'down': Down,
+    'download': Download,
+    'edit': Edit,
+    'filter': Filter,
+    'more': More,
+    'plus': Plus,
+    'refresh': Refresh,
+    'save': Save,
+    'user': User,
+    'power': Power,
+    'gear': Gear,
   }
 
   const IconName = icons[props.icon]
@@ -45,7 +45,7 @@ function Icon(props) {
 Icon.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOf([
-    'back',
+    'arrow-left',
     'close',
     'down',
     'download',
