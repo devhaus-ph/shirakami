@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import Icon from '../icon'
 
 function Button(props) {
-  let className = ['button', props.variant, props.className]
+  const transparent = props.transparent && 'transparent'
+  let className = ['button', props.variant, transparent, props.className]
   let btnIcon = <div className="hidden" />
 
   className = className.join(' ').trim()
