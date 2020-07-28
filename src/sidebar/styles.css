@@ -50,8 +50,10 @@
 .sidebar > .content > .menu > a {
   display: block;
   padding: 0.5rem 1rem;
+  color: var(--grey-shade-3);
   border-radius: 0.125rem;
   cursor: pointer;
+  text-decoration: none;
   transition: all 200ms ease;
 }
 
