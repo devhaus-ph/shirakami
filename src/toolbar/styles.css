@@ -9,3 +9,12 @@
 .toolbar > * {
   margin: 1rem;
 }
+
+/*------------
+    Tablet
+------------*/
+@media (min-width: 640px) {
+  .toolbar > *:first-child {
+    margin-left: 0;
+  }
+}
