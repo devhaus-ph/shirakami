@@ -1,34 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Plus from './plus'
-import ArrowLeft from './arrow-left'
-import Close from './close'
-import ChevronDown from './chevron-down'
-import Download from './download'
-import Edit from './edit'
-import Filter from './filter'
-import MoreVertical from './more-vertical'
-import Refresh from './refresh'
-import Save from './save'
-import User from './user'
-import Power from './power'
-import Gear from './gear'
+import ArrowLeft from './_arrow-left'
+import ChevronDown from './_chevron-down'
+import ChevronLeft from './_chevron-left'
+import ChevronRight from './_chevron-right'
+import Close from './_close'
+import Download from './_download'
+import Edit from './_edit'
+import Filter from './_filter'
+import Gear from './_gear'
+import MoreVertical from './_more-vertical'
+import Plus from './_plus'
+import Power from './_power'
+import Refresh from './_refresh'
+import Save from './_save'
+import Trash from './_trash'
+import User from './_user'
 
 function Icon(props) {
   const icons = {
     'arrow-left': ArrowLeft,
-    'close': Close,
     'chevron-down': ChevronDown,
+    'chevron-left': ChevronLeft,
+    'chevron-right': ChevronRight,
+    'close': Close,
     'download': Download,
     'edit': Edit,
     'filter': Filter,
+    'gear': Gear,
     'more-vertical': MoreVertical,
     'plus': Plus,
+    'power': Power,
     'refresh': Refresh,
     'save': Save,
+    'trash': Trash,
     'user': User,
-    'power': Power,
-    'gear': Gear,
   }
 
   const IconName = icons[props.icon]
@@ -46,18 +52,21 @@ Icon.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOf([
     'arrow-left',
-    'close',
     'chevron-down',
+    'chevron-left',
+    'chevron-right',
+    'close',
     'download',
     'edit',
     'filter',
+    'gear',
     'more-vertical',
     'plus',
+    'power',
     'refresh',
     'save',
+    'trash',
     'user',
-    'power',
-    'gear',
   ]).isRequired,
   iconSize: PropTypes.number,
 }
