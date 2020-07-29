@@ -12,7 +12,7 @@ export const chevronDown = () => <Icon icon="chevron-down" />
 export const download = () => <Icon icon="download" />
 export const edit = () => <Icon icon="edit" />
 export const filter = () => <Icon icon="filter" />
-export const more = () => <Icon icon="more" />
+export const moreVertical = () => <Icon icon="more-vertical" />
 export const plus = () => <Icon icon="plus" />
 export const refresh = () => <Icon icon="refresh" />
 export const save = () => <Icon icon="save" />

@@ -7,7 +7,7 @@ import ChevronDown from './chevron-down'
 import Download from './download'
 import Edit from './edit'
 import Filter from './filter'
-import More from './more'
+import MoreVertical from './more-vertical'
 import Refresh from './refresh'
 import Save from './save'
 import User from './user'
@@ -22,7 +22,7 @@ function Icon(props) {
     'download': Download,
     'edit': Edit,
     'filter': Filter,
-    'more': More,
+    'more-vertical': MoreVertical,
     'plus': Plus,
     'refresh': Refresh,
     'save': Save,
@@ -51,7 +51,7 @@ Icon.propTypes = {
     'download',
     'edit',
     'filter',
-    'more',
+    'more-vertical',
     'plus',
     'refresh',
     'save',

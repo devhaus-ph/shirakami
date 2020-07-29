@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function More(props) {
+function MoreVertical(props) {
   return (
     <svg
       className={props.className}
@@ -34,8 +34,8 @@ function More(props) {
   )
 }
 
-More.propTypes = {
+MoreVertical.propTypes = {
   className: PropTypes.string,
 }
 
-export default More
+export default MoreVertical
