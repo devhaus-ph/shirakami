@@ -8,7 +8,7 @@ export default {
 
 export const arrowLeft = () => <Icon icon="arrow-left" />
 export const close = () => <Icon icon="close" />
-export const down = () => <Icon icon="down" />
+export const chevronDown = () => <Icon icon="chevron-down" />
 export const download = () => <Icon icon="download" />
 export const edit = () => <Icon icon="edit" />
 export const filter = () => <Icon icon="filter" />

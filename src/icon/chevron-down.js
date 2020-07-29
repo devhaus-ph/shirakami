@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Down(props) {
+function ChevronDown(props) {
   return (
     <svg
       className={props.className}
@@ -20,8 +20,8 @@ function Down(props) {
   )
 }
 
-Down.propTypes = {
+ChevronDown.propTypes = {
   className: PropTypes.string,
 }
 
-export default Down
+export default ChevronDown

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Plus from './plus'
 import ArrowLeft from './arrowLeft'
 import Close from './close'
-import Down from './down'
+import ChevronDown from './chevron-down'
 import Download from './download'
 import Edit from './edit'
 import Filter from './filter'
@@ -18,7 +18,7 @@ function Icon(props) {
   const icons = {
     'arrow-left': ArrowLeft,
     'close': Close,
-    'down': Down,
+    'chevron-down': ChevronDown,
     'download': Download,
     'edit': Edit,
     'filter': Filter,
@@ -47,7 +47,7 @@ Icon.propTypes = {
   icon: PropTypes.oneOf([
     'arrow-left',
     'close',
-    'down',
+    'chevron-down',
     'download',
     'edit',
     'filter',
