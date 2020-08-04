@@ -26,7 +26,12 @@ function Dropdown(props) {
   return (
     <div className="dropdown">
       <div ref={refToggleButton} onClick={toggleDropdownMenu}>
-        <Button variant="icon" icon={props.icon} iconSize={props.iconSize} />
+        <Button
+          variant="icon"
+          icon={props.icon}
+          iconSize={props.iconSize}
+          transparent
+        />
       </div>
       <dl className={className}>{props.children}</dl>
     </div>
@@ -66,7 +71,7 @@ Dropdown.Item.propTypes = {
     Default Props
 -------------------*/
 Dropdown.defaultProps = {
-  icon: 'more',
+  icon: 'more-vertical',
   iconSize: 18,
 }
 
