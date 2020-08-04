@@ -12,9 +12,9 @@ function ChevronLeft(props) {
       <path
         d="M15 6L9 12L15 18"
         stroke="#333333"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
