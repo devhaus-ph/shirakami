@@ -7,7 +7,7 @@ function Modal(props) {
   const [visibility, setVisibility] = useState(false)
   const openModal = () => setVisibility(true)
   const closeModal = () => setVisibility(false)
-  let modal = <>{btnOpenModal}</>
+  let modal = <React.Fragment>{btnOpenModal}</React.Fragment>
 
   const btnOpenModal = (
     <Button variant="icon" icon={props.icon} onClick={openModal} />
@@ -36,7 +36,7 @@ function Modal(props) {
       </div>
     )
   } else {
-    modal = <>{btnOpenModal}</>
+    modal = <React.Fragment>{btnOpenModal}</React.Fragment>
   }
 
   return modal
