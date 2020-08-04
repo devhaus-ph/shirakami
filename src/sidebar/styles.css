@@ -90,8 +90,9 @@
 ------------*/
 @media (min-width: 640px) {
   .sidebar {
-    width: 200px;
+    width: 230px;
     padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .sidebar > .content {
