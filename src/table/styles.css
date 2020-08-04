@@ -32,14 +32,26 @@
   padding-right: 1rem;
 }
 
+.table .body .row:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
 .table .row:nth-child(even) {
   background-color: var(--light);
 }
 
 .row > .cell {
-  text-transform: capitalize;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.row > .cell.capitalize {
+  text-transform: capitalize;
+}
+
+.row > .cell.min-width {
+  width: 1%;
 }
 
 .row > .cell:first-of-type {

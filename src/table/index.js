@@ -32,13 +32,25 @@ Table.HeaderCell = props => {
   )
 }
 
-Table.Row = props => (
-  <tr className={`row ${props.className}`.trim()}>{props.children}</tr>
-)
+Table.Row = props => {
+  const className = ['row', props.className].join(' ').trim()
+
+  return (
+    <tr
+      className={className}
+      onClick={props.onClick}
+      onDoubleClick={props.onDoubleClick}>
+      {props.children}
+    </tr>
+  )
+}
 
 Table.Cell = props => {
+  const minWidth = props.minWidth && 'min-width'
   const textRight = props.textRight && 'right'
-  const className = ['cell', textRight, props.className].join(' ').trim()
+  const capitalize = props.capitalize && 'capitalize'
+  let className = ['cell', minWidth, textRight, capitalize, props.className]
+  className = className.join(' ').trim()
   return <td className={className}>{props.children}</td>
 }
 
@@ -63,18 +75,23 @@ Table.Body.propTypes = {
 Table.HeaderCell.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  textRight: PropTypes.string,
+  textRight: PropTypes.bool,
   title: PropTypes.string,
 }
 
 Table.Row.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  onClick: PropTypes.func,
+  onDoubleClick: PropTypes.func,
 }
 
 Table.Cell.propTypes = {
+  capitalize: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
+  minWidth: PropTypes.bool,
+  textRight: PropTypes.bool,
 }
 
 export default Table
