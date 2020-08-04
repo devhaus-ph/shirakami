@@ -14,7 +14,7 @@
     Tablet
 ------------*/
 @media (min-width: 640px) {
-  .toolbar > *:first-child {
+  .toolbar > *:first-of-type {
     margin-left: 0;
   }
 }
