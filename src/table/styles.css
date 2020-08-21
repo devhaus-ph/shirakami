@@ -6,6 +6,18 @@
   border-collapse: collapse;
 }
 
+/*---------
+    Row
+---------*/
+.table .row {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*------------
+    Header
+------------*/
 .table > .header {
   border-bottom: 1px solid var(--grey);
   color: var(--grey);
@@ -26,15 +38,13 @@
   padding-right: 1rem;
 }
 
-.table .row {
-  height: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
+/*----------
+    Body
+----------*/
 .table .body .row:hover {
   background-color: var(--blue);
   cursor: pointer;
+  transition: all 100ms ease;
 }
 
 .table .row:nth-child(even) {
@@ -46,6 +56,9 @@
   padding-right: 1rem;
 }
 
+/*-----------
+    Props
+-----------*/
 .row > .cell.capitalize {
   text-transform: capitalize;
 }
