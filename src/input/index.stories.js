@@ -6,4 +6,8 @@ export default {
   component: Input,
 }
 
-export const basic = () => <Input />
+export const basic = () => (
+  <div>
+    <Input />
+  </div>
+)

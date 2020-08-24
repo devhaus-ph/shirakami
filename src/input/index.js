@@ -24,8 +24,4 @@ Input.propTypes = {
   type: PropTypes.string,
 }
 
-Input.defaultProps = {
-  size: 25,
-}
-
 export default Input

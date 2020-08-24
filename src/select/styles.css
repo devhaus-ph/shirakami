@@ -1,77 +1,34 @@
 /*------------
     Select
 ------------*/
-.select {
+.sk-select {
   display: flex;
-  position: relative;
-  width: 227px;
-  border: 1px solid var(--light);
-  outline: none;
+  align-items: center;
+}
+
+.sk-select-input {
+  appearance: none;
+  border: 1px solid var(--grey-tint-2);
+  width: 16.6rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
   transition: all 200ms ease;
 }
 
-.select:hover {
+.sk-select-input:focus {
   border-color: var(--grey-shade-3);
   background-color: var(--light);
   transition: all 200ms ease;
 }
 
-.select:focus-within {
-  border: 1px solid var(--grey-shade-3);
-  background-color: var(--light);
-  transition: all 200ms ease;
-}
-
-/*-----------
-    Input
------------*/
-.select > .input {
-  width: 100%;
-  height: 26px;
-  padding-left: 0.25rem;
-  background-color: transparent;
-  appearance: none;
-  z-index: 2;
-}
-
-.select > .input::after {
-  border: none;
-}
-
-/*----------
-    Icon
-----------*/
-.select > .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 0;
-  height: 26px;
-  width: 26px;
-  border-left: 1px solid var(--light);
-  z-index: 1;
-  transition: all 200ms ease;
-}
-
-.select:focus-within > .icon {
-  border-left: 1px solid var(--grey-shade-3);
-  transition: all 200ms ease;
-}
-
-.select > .icon::after {
-  content: '';
-  position: absolute;
-  top: 6px;
+.sk-select-icon {
+  position: relative;
+  top: -0.1rem;
+  right: 1.2rem;
   height: 0.5rem;
   width: 0.5rem;
   border-width: 0 2px 2px 0;
   border-style: solid;
   border-color: var(--grey-shade-3);
   transform: rotate(45deg);
-}
-
-.select:hover > .icon {
-  border-left: 1px solid var(--grey-shade-3);
-  transition: all 200ms ease;
 }

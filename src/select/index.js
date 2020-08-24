@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 
 function Select(props) {
   return (
-    <div className="select">
-      <select className="input">{props.children}</select>
-      <span className="icon" />
+    <div className="sk-select">
+      <select className="sk-select-input">{props.children}</select>
+      <span className="sk-select-icon" />
     </div>
   )
 }
