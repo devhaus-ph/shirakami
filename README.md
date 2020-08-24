@@ -35,4 +35,4 @@ export default App
 
 ## 📝 License
 
-Code released under [MIT](https://github.com/buefy/buefy/blob/master/LICENSE) license.
+Code released under [MIT](https://github.com/devhaus-ph/shirakami/blob/master/LICENSE) license.
