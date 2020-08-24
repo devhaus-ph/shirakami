@@ -1,6 +1,6 @@
 {
   "name": "shirakami-ui",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "React UI Kit by DevHaus",
   "source": "src/index.js",
   "main": "dist/shirakami.js",
