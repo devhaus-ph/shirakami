@@ -6,8 +6,7 @@
   "main": "dist/shirakami.js",
   "module": "dist/shirakami.esm.js",
   "dependencies": {
-    "sanitize.css": "^11.0.1",
-    "typeface-oxygen": "0.0.72"
+    "sanitize.css": "^11.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",

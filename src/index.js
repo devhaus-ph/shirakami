@@ -1,4 +1,3 @@
-import 'typeface-oxygen'
 import './styles.css'
 
 export { default as Button } from './button'
