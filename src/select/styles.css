@@ -31,4 +31,5 @@
   border-style: solid;
   border-color: var(--grey-shade-3);
   transform: rotate(45deg);
+  pointer-events: none;
 }
