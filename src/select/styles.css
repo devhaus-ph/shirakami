@@ -2,34 +2,33 @@
     Select
 ------------*/
 .sk-select {
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: min-content;
 }
 
 .sk-select-input {
-  appearance: none;
+  display: block;
+  padding: 0.25rem 50px 0.25rem 10px;
   border: 1px solid var(--grey-tint-2);
-  width: 16.6rem;
-  padding: 0.25rem 0.5rem;
+  appearance: none;
   cursor: pointer;
-  transition: all 200ms ease;
 }
 
 .sk-select-input:focus {
-  border-color: var(--grey-shade-3);
   background-color: var(--light);
   transition: all 200ms ease;
 }
 
-.sk-select-icon {
-  position: relative;
-  top: -0.1rem;
-  right: 1.2rem;
-  height: 0.5rem;
+.sk-select::after {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
   width: 0.5rem;
+  height: 0.5rem;
   border-width: 0 2px 2px 0;
-  border-style: solid;
   border-color: var(--grey-shade-3);
+  border-style: solid;
   transform: rotate(45deg);
   pointer-events: none;
 }

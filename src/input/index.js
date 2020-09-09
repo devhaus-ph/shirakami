@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Input(props) {
-  const className = ['input', props.className].join(' ').trim()
+  const className = ['sk-input', props.className].join(' ').trim()
 
   return (
     <input

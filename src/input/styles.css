@@ -1,17 +1,18 @@
 /*-----------
     Input
 -----------*/
-.input {
+.sk-input {
   display: block;
-  width: 15rem;
-  padding: 0.25rem 0.75rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 14px;
+  padding-right: 10px;
   border: 1px solid var(--grey-tint-2);
   outline: none;
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
-.input:focus {
-  border-color: var(--grey-shade-3);
+.sk-input:focus {
   background-color: var(--light);
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
