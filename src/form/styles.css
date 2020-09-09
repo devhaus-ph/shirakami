@@ -1,40 +1,35 @@
 /*----------
     Form
 ----------*/
-.form {
+.sk-form {
   width: max-content;
 }
 
-.form > .title {
+.sk-form-title {
   margin-top: 0;
   margin-bottom: 0.25rem;
 }
 
-.form > .desc {
+.sk-form-desc {
   margin-top: 0;
   margin-bottom: 2rem;
   color: var(--grey-shade-1);
 }
 
-.form > .section {
+.sk-form-section {
   margin-bottom: 2rem;
 }
 
-.form > .section > .label {
-  color: var(--grey-shade-3);
-  margin-bottom: 1rem;
-}
-
-.form > .section > .row {
-  max-width: 90vw;
+.sk-form-section-row {
+  max-width: 80vw;
   display: flex;
   flex-wrap: wrap;
 }
 
-.form > .section > .row > * {
+.sk-form-section-row > * {
   margin-right: 1rem;
 }
 
-.form > .footer > * {
+.sk-form-footer > * {
   margin-right: 2rem;
 }

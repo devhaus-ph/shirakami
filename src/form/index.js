@@ -3,12 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Form(props) {
-  const className = ['form', props.className].join(' ').trim()
+  const className = ['sk-form', props.className].join(' ').trim()
 
   return (
     <form className={className} onSubmit={props.onSubmit}>
-      <h2 className="title">{props.title}</h2>
-      <p className="desc">{props.desc}</p>
+      <h2 className="sk-form-title">{props.title}</h2>
+      <p className="sk-form-desc">{props.desc}</p>
       {props.children}
     </form>
   )
@@ -18,7 +18,7 @@ function Form(props) {
     Sub Components
 --------------------*/
 Form.Section = props => {
-  const className = ['section', props.className].join(' ').trim()
+  const className = ['sk-form-section', props.className].join(' ').trim()
 
   return (
     <section className={className}>
@@ -29,12 +29,12 @@ Form.Section = props => {
 }
 
 Form.Row = props => {
-  const className = ['row', props.className].join(' ').trim()
+  const className = ['sk-form-section-row', props.className].join(' ').trim()
   return <div className={className}>{props.children}</div>
 }
 
 Form.Footer = props => {
-  const className = ['footer', props.className].join(' ').trim()
+  const className = ['sk-form-footer', props.className].join(' ').trim()
   return <section className={className}>{props.children}</section>
 }
 
