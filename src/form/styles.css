@@ -25,6 +25,16 @@
   margin-bottom: 1rem;
 }
 
+.form > .section > .row {
+  max-width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form > .section > .row > * {
+  margin-right: 1rem;
+}
+
 .form > .footer > * {
   margin-right: 2rem;
 }

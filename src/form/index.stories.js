@@ -9,12 +9,14 @@ export default {
 export const basic = () => (
   <Form title="User Form" description="Create new user.">
     <Form.Section title="Personal Details">
-      <Field label="Name">
-        <Input />
-      </Field>
-      <Field label="Birthday">
-        <Input type="date" />
-      </Field>
+      <Form.Row>
+        <Field label="Name">
+          <Input />
+        </Field>
+        <Field label="Birthday">
+          <Input type="date" />
+        </Field>
+      </Form.Row>
     </Form.Section>
 
     <Form.Section title="Account Details">

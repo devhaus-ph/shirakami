@@ -28,6 +28,11 @@ Form.Section = props => {
   )
 }
 
+Form.Row = props => {
+  const className = ['row', props.className].join(' ').trim()
+  return <div className={className}>{props.children}</div>
+}
+
 Form.Footer = props => {
   const className = ['footer', props.className].join(' ').trim()
   return <section className={className}>{props.children}</section>
@@ -48,6 +53,11 @@ Form.Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   title: PropTypes.string,
+}
+
+Form.Row.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
 }
 
 Form.Footer.propTypes = {
