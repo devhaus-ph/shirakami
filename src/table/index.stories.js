@@ -41,6 +41,13 @@ export const basic = () => {
           <Table.Cell capitalize>male</Table.Cell>
           <Table.Cell textRight>18</Table.Cell>
         </Table.Row>
+        <Table.Row>
+          <Table.Cell minWidth>{dropdown}</Table.Cell>
+          <Table.Cell>Sanji</Table.Cell>
+          <Table.Cell>sanji@op.com</Table.Cell>
+          <Table.Cell capitalize>female</Table.Cell>
+          <Table.Cell textRight>18</Table.Cell>
+        </Table.Row>
       </Table.Body>
     </Table>
   )

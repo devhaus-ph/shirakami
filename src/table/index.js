@@ -4,9 +4,11 @@ import PropTypes from 'prop-types'
 
 function Table(props) {
   return (
-    <table className={`table ${props.className}`.trim()}>
-      {props.children}
-    </table>
+    <div className="sk-table-container">
+      <table className={`table ${props.className}`.trim()}>
+        {props.children}
+      </table>
+    </div>
   )
 }
 
