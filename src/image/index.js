@@ -1,27 +1,15 @@
 import './styles.css'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Image(props) {
-  const rounded = props.rounded && 'rounded'
-  const className = ['image', rounded, props.className].join(' ').trim()
+  // Separate HTML attribute props
+  const { className, rounded, ...other } = props
 
-  return (
-    <img
-      className={className}
-      src={props.src}
-      height={props.height}
-      width={props.width}
-    />
-  )
-}
+  // Build CSS Classes
+  const isRounded = rounded && 'sk-image-rounded'
+  const styleName = ['sk-image', isRounded, className].join(' ').trim()
 
-Image.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  height: PropTypes.number,
-  src: PropTypes.string,
-  width: PropTypes.number,
+  return <img className={styleName} {...other} />
 }
 
 export default Image

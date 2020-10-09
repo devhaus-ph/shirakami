@@ -4,72 +4,86 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 
 function Dropdown(props) {
-  const refToggleButton = useRef()
+  // Create dropdown menu visibility state
   const [visibility, setVisibility] = useState(false)
-  const openDropdownMenu = () => setVisibility(true)
-  const closeDropdownMenu = () => setVisibility(false)
-  let className = ['menu', visibility ? 'show' : ''].join(' ').trim()
 
-  function toggleDropdownMenu() {
-    visibility ? closeDropdownMenu() : openDropdownMenu()
+  // Create dropdown actions
+  const execute = {
+    openDropdownMenu: function() {
+      setVisibility(true)
+    },
+    closeDropdownMenu: function() {
+      setVisibility(false)
+    },
+    toggleDropdownMenu: function() {
+      visibility ? execute.closeDropdownMenu() : execute.openDropdownMenu()
+    },
+    handleClickOutside: function(e) {
+      if (!refToggleButton.current.contains(e.target))
+        execute.closeDropdownMenu()
+    },
   }
 
-  function handleClickOutside(e) {
-    if (!refToggleButton.current.contains(e.target)) closeDropdownMenu()
-  }
-
+  // Create event listener outside component
   useEffect(() => {
-    document.body.addEventListener('click', handleClickOutside)
-    return () => document.body.removeEventListener('click', handleClickOutside)
-  }, [visibility])
+    document.body.addEventListener('click', execute.handleClickOutside)
+    return () =>
+      document.body.removeEventListener('click', execute.handleClickOutside)
+  })
+
+  // Create toggle button
+  const refToggleButton = useRef()
+  const toggleButton = (
+    <div ref={refToggleButton} onClick={execute.toggleDropdownMenu}>
+      <Button
+        variant="icon"
+        icon={props.icon}
+        iconSize={props.iconSize}
+        transparent
+      />
+    </div>
+  )
+
+  // Build CSS classes
+  const dropdownMenuStyle = 'sk-dropdown-menu'
+  const isVisible = visibility ? 'sk-dropdown-menu-show' : ''
+  const styleName = [dropdownMenuStyle, isVisible].join(' ').trim()
 
   return (
     <div className="dropdown">
-      <div ref={refToggleButton} onClick={toggleDropdownMenu}>
-        <Button
-          variant="icon"
-          icon={props.icon}
-          iconSize={props.iconSize}
-          transparent
-        />
-      </div>
-      <dl className={className}>{props.children}</dl>
+      {toggleButton}
+      <dl className={styleName}>{props.children}</dl>
     </div>
   )
 }
 
-/*-------------------
-    Sub Component
--------------------*/
+/*--  Sub Component  --*/
 Dropdown.Item = props => {
-  let className = ['item', props.className].join(' ').trim()
+  // Separate HTML attribute props
+  const { children, className, ...other } = props
+
+  // Build CSS classes
+  const dropdownItemStyle = 'sk-dropdown-item'
+  let styleName = [dropdownItemStyle, className].join(' ').trim()
 
   return (
-    <dt className={className} onClick={props.onClick}>
-      {props.children}
+    <dt className={styleName} {...other}>
+      {children}
     </dt>
   )
 }
 
-/*----------------
-    Prop Types
-----------------*/
+/*--  Prop Types  --*/
 Dropdown.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
   icon: PropTypes.string,
   iconSize: PropTypes.number,
 }
 
 Dropdown.Item.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.string,
   onClick: PropTypes.func,
 }
 
-/*-------------------
-    Default Props
--------------------*/
+/*--  Default Props  --*/
 Dropdown.defaultProps = {
   icon: 'more-vertical',
   iconSize: 18,

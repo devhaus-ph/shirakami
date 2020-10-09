@@ -1,7 +1,5 @@
-/*--------------
-    Checkbox
---------------*/
-.checkbox {
+/*--  Checkbox  --*/
+.sk-checkbox {
   display: block;
   position: relative;
   height: max-content;
@@ -11,21 +9,21 @@
   cursor: pointer;
 }
 
-.checkbox > .label {
+.sk-checkbox-label {
   margin-top: 0;
   margin-bottom: 0.75rem;
   line-height: 1.4rem;
   color: var(--grey-shade-1);
 }
 
-.checkbox > .input {
+.sk-checkbox-input {
   position: absolute;
   width: 0;
   height: 0;
   opacity: 0;
 }
 
-.checkbox > .mark {
+.sk-checkbox-mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,57 +34,49 @@
   transition: all 200ms ease;
 }
 
-/*-----------
-    Hover
------------*/
-.checkbox:hover > .input ~ .mark {
+/*--  Hover  --*/
+.sk-checkbox:hover > .sk-checkbox-input ~ .sk-checkbox-mark {
   border: 1px solid var(--grey-shade-3);
   background-color: var(--light);
   transition: all 200ms ease;
 }
 
-.checkbox:hover > .input ~ .label {
+.sk-checkbox:hover > .sk-checkbox-input ~ .sk-checkbox-label {
   color: var(--grey-shade-3);
   transition: all 200ms ease;
 }
 
-.checkbox > .input:hover {
+.sk-checkbox-input:hover {
   cursor: pointer;
 }
 
-/*-----------
-    Focus
------------*/
-.checkbox > .input:focus ~ .mark {
+/*--  Focus  --*/
+.sk-checkbox-input:focus ~ .sk-checkbox-mark {
   border: 1px solid var(--blue);
   background-color: var(--light);
   transition: all 200ms ease;
 }
 
-.checkbox > .input:focus ~ .label {
+.sk-checkbox-input:focus ~ .sk-checkbox-label {
   color: var(--grey-shade-3);
   transition: all 200ms ease;
 }
 
-/*-------------
-    Checked
--------------*/
-.checkbox > .input:checked ~ .mark {
+/*--  Checked  --*/
+.sk-checkbox-input:checked ~ .sk-checkbox-mark {
   background-color: var(--white);
 }
 
-.checkbox > .input:checked ~ .label {
+.sk-checkbox-input:checked ~ .sk-checkbox-label {
   color: var(--grey-shade-3);
 }
 
-.checkbox > .input:checked ~ .mark:after {
+.sk-checkbox-input:checked ~ .sk-checkbox-mark:after {
   display: block;
 }
 
-/*------------
-    Marker
-------------*/
-.checkbox > .mark:after {
+/*--  Marker  --*/
+.sk-checkbox > .sk-checkbox-mark:after {
   content: '';
   display: none;
   position: absolute;

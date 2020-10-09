@@ -1,13 +1,19 @@
 import './styles.css'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Container(props) {
-  return <div className="container">{props.children}</div>
-}
+  // Separate HTML attribute props
+  const { children, className, ...other } = props
 
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
+  // Build CSS classes
+  const containerStyle = 'sk-container'
+  const styleName = [containerStyle, className].join(' ').trim()
+
+  return (
+    <div className={styleName} {...other}>
+      {props.children}
+    </div>
+  )
 }
 
 export default Container

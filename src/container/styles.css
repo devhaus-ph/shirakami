@@ -1,44 +1,34 @@
-/*---------------
-    Container
----------------*/
-.container {
+/*--  Container  --*/
+.sk-container {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-/*------------
-    Tablet
-------------*/
+/*--  Tablet  --*/
 @media (min-width: 640px) {
-  .container {
+  .sk-container {
     max-width: 640px;
   }
 }
 
-/*------------
-    Laptop
-------------*/
+/*--  Laptop  --*/
 @media (min-width: 768px) {
-  .container {
+  .sk-container {
     max-width: 768px;
   }
 }
 
-/*-------------
-    Desktop
--------------*/
+/*--  Desktop  --*/
 @media (min-width: 1024px) {
-  .container {
+  .sk-container {
     max-width: 1024px;
   }
 }
 
-/*----------------
-    Widescreen
-----------------*/
+/*--  Widescreen  --*/
 @media (min-width: 1200px) {
-  .container {
+  .sk-container {
     max-width: 1200px;
   }
 }

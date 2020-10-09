@@ -1,9 +1,9 @@
-.image {
+.sk-image {
   display: block;
   object-fit: cover;
   object-position: center;
 }
 
-.image.rounded {
+.sk-image-rounded {
   border-radius: 50%;
 }

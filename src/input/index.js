@@ -1,27 +1,13 @@
 import './styles.css'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Input(props) {
-  const className = ['sk-input', props.className].join(' ').trim()
+  // Separate className from other props
+  const { className, ...other } = props
 
-  return (
-    <input
-      className={className}
-      pattern={props.pattern}
-      placeholder={props.placeholder}
-      size={props.size}
-      type={props.type}
-    />
-  )
-}
-
-Input.propTypes = {
-  className: PropTypes.string,
-  pattern: PropTypes.string,
-  placeholder: PropTypes.string,
-  size: PropTypes.number,
-  type: PropTypes.string,
+  // Build CSS classes
+  const styleName = ['sk-input', className].join(' ').trim()
+  return <input className={styleName} {...other} />
 }
 
 Input.defaultProps = {

@@ -1,13 +1,11 @@
-/*----------------
-    Pagination
-----------------*/
-.pagination {
+/*--  Pagination  --*/
+.sk-pagination {
   display: flex;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-.pagination > .item {
+.sk-pagination-item {
   padding: 0.5rem 0.75rem;
   margin-right: 2rem;
   border-radius: 0.125rem;
@@ -15,12 +13,16 @@
   user-select: none;
 }
 
-.pagination > .item.active {
+.sk-pagination-item.active {
   background-color: var(--light);
 }
 
-.pagination > .ellipsis {
+.sk-pagination-ellipsis {
   margin-right: 2rem;
   padding: 0.5rem;
   user-select: none;
+}
+
+.sk-pagination-hidden {
+  display: none;
 }

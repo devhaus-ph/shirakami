@@ -1,14 +1,12 @@
-/*----------
-    Flex
-----------*/
-.flex {
+/*--  Flex  --*/
+.sk-flex {
   display: flex;
 }
 
-.column {
+.sk-flex-column {
   flex-direction: column;
 }
 
-.fullwidth {
+.sk-flex-fullwidth {
   width: 100%;
 }

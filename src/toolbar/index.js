@@ -1,15 +1,11 @@
 import './styles.css'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Toolbar(props) {
-  const className = ['toolbar', props.className].join(' ').trim()
-  return <div className={className}>{props.children}</div>
-}
+  // Build CSS classes
+  const styleName = ['sk-toolbar', props.className].join(' ').trim()
 
-Toolbar.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  return <div className={styleName}>{props.children}</div>
 }
 
 export default Toolbar

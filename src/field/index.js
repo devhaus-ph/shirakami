@@ -3,20 +3,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Field(props) {
-  const className = ['field', props.className].join(' ').trim()
+  // Separate HTML attribute props
+  const { children, className, label, message, ...other } = props
+
+  // Build CSS classes
+  const fieldStyle = 'sk-field'
+  const styleName = [fieldStyle, className].join(' ').trim()
 
   return (
-    <div className={className}>
-      <label className="label">{props.label}</label>
-      {props.children}
-      <label className="message">{props.message}</label>
+    <div className={styleName} {...other}>
+      <label className="sk-field-label">{label}</label>
+      {children}
+      <label className="sk-field-message">{message}</label>
     </div>
   )
 }
 
 Field.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
   label: PropTypes.string,
   message: PropTypes.string,
 }

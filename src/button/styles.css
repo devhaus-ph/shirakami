@@ -1,7 +1,5 @@
-/*------------
-    Button
-------------*/
-.button {
+/*--  Button  --*/
+.sk-button {
   height: min-content;
   padding: 0.3rem 1.75rem;
   transition: all 100ms ease;
@@ -9,88 +7,80 @@
   outline: none;
 }
 
-/*--------------------
-    Variant: Solid
---------------------*/
-.button.solid {
+/*--  Variant: Solid  --*/
+.sk-button-solid {
   border: 2px solid var(--grey-shade-3);
   background-color: var(--grey-shade-3);
   color: var(--white);
 }
 
-.button.solid:hover {
+.sk-button-solid:hover {
   border: 2px solid var(--grey-shade-2);
   background-color: var(--grey-shade-2);
   color: var(--white);
 }
 
-.button.solid:focus {
+.sk-button-solid:focus {
   border: 2px solid var(--blue);
   background-color: var(--grey-shade-3);
 }
 
-.button.solid:active {
+.sk-button-solid:active {
   border: 2px solid var(--grey-shade-1);
   background-color: var(--grey-shade-1);
 }
 
-/*----------------------
-    Variant: Outline
-----------------------*/
-.button.outline {
+/*--  Variant: Outline  --*/
+.sk-button-outline {
   border: 2px solid var(--grey-shade-3);
   background-color: var(--white);
   color: var(--grey-shade-3);
 }
 
-.button.outline:hover {
+.sk-button-outline:hover {
   border: 2px solid var(--grey-shade-2);
   background-color: var(--grey-tint-3);
   color: var(--grey-shade-2);
 }
 
-.button.outline:focus {
+.sk-button-outline:focus {
   border: 2px solid var(--blue);
   color: var(--grey-shade-3);
 }
 
-.button.outline:active {
+.sk-button-outline:active {
   border: 2px solid var(--grey-shade-1);
   background-color: var(--grey-shade-1);
   color: var(--white);
 }
 
-/*-------------------
-    Variant: Text
--------------------*/
-.button.text {
+/*--  Variant: Text  --*/
+.sk-button-text {
   padding: 0.5rem 2rem;
   border: 2px solid var(--white);
   background-color: var(--white);
   color: var(--grey-shade-3);
 }
 
-.button.text:hover {
+.sk-button-text:hover {
   background-color: var(--grey-tint-3);
   color: var(--grey-shade-2);
 }
 
-.button.text:focus {
+.sk-button-text:focus {
   border: 2px solid var(--blue);
   background-color: var(--white);
   color: var(--grey-shade-3);
 }
 
-.button.text:active {
+.sk-button-text:active {
   border: 2px solid var(--grey-shade-1);
   background-color: var(--grey-shade-1);
   color: var(--white);
 }
 
-/*-------------------
-    Variant: Icon
--------------------*/
-.button.icon {
+/*--  Variant: Icon  --*/
+.sk-button-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -102,25 +92,27 @@
   border-radius: 0.5rem;
 }
 
-.button.icon:hover {
+.sk-button-icon:hover {
   border: 2px solid var(--grey-tint-3);
   background-color: var(--grey-tint-3);
 }
 
-.button.icon:focus {
+.sk-button-icon:focus {
   border: 2px solid var(--blue);
   background-color: var(--white);
 }
 
-.button.icon:active {
+.sk-button-icon:active {
   border: 2px solid var(--grey);
   background-color: var(--grey);
 }
 
-/*-----------------
-    Transparent
------------------*/
-.button.transparent {
+.sk-button-icon-hidden {
+  display: none;
+}
+
+/*--  Transparent  --*/
+.sk-button-transparent {
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 0);
 }

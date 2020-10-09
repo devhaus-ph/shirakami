@@ -1,16 +1,12 @@
-/*-------------
-    Sidebar
--------------*/
-.sidebar {
+/*--  Sidebar  --*/
+.sk-sidebar {
   margin: 0;
   padding: 4rem 0rem;
   z-index: 10;
 }
 
-/*-------------
-    Content
--------------*/
-.sidebar > .content {
+/*--  Content  --*/
+.sk-sidebar-content {
   display: none;
   position: absolute;
   top: 0;
@@ -20,33 +16,27 @@
   background-color: rgba(255, 255, 255, 95%);
 }
 
-.sidebar > .content.show {
+.sk-sidebar-show {
   display: block;
 }
 
-/*----------
-    Menu
-----------*/
-.sidebar > .content > .menu {
+/*--  Menu  --*/
+.sk-sidebar-menu {
   margin: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-/*-----------
-    Label
------------*/
-.sidebar > .content > .menu > .label {
+/*--  Label  --*/
+.sk-sidebar-label {
   display: block;
   font-size: 0.75rem;
   padding-bottom: 0.25rem;
   color: var(--grey);
 }
 
-/*----------
-    Item
-----------*/
-.sidebar > .content > .menu > a {
+/*--  Item  --*/
+.sk-sidebar-menu > a {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--grey-shade-3);
@@ -56,24 +46,23 @@
   transition: all 200ms ease;
 }
 
-.sidebar > .content > .menu > a.active {
+.sk-sidebar-menu > a.active {
   background-color: var(--grey-shade-3);
   color: var(--white);
 }
 
-/*----------------
-    Hover Item
-----------------*/
-.sidebar > .content > .menu > a:hover {
+/*--  Hover Item  --*/
+.sk-sidebar-menu > a:hover {
   background-color: var(--light);
   transition: all 200ms ease;
 }
 
-.sidebar > .content > .menu a.active:hover {
-  color: var(--grey-shade-3);
+.sk-sidebar-menu a.active:hover {
+  background-color: var(--grey-shade-3);
+  color: var(--white);
 }
 
-.sidebar > .mobile-menu {
+.sk-sidebar-mobile-menu {
   display: flex;
   justify-content: space-around;
   position: fixed;
@@ -85,24 +74,22 @@
   background-color: rgba(255, 255, 255, 95%);
 }
 
-/*------------
-    Tablet
-------------*/
+/*--  Tablet  --*/
 @media (min-width: 640px) {
-  .sidebar {
+  .sk-sidebar {
     width: 230px;
     min-width: 230px;
     padding-right: 1rem;
     padding-left: 1rem;
   }
 
-  .sidebar > .content {
+  .sk-sidebar-content {
     display: block;
     position: static;
     padding: 0;
   }
 
-  .sidebar > .mobile-menu {
+  .sk-sidebar-mobile-menu {
     display: none;
   }
 }

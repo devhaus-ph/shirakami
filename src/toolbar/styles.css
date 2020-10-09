@@ -1,20 +1,16 @@
-/*-------------
-    Toolbar
--------------*/
-.toolbar {
+/*--  Toolbar  --*/
+.sk-toolbar {
   display: flex;
   flex-wrap: wrap;
 }
 
-.toolbar > * {
+.sk-toolbar > * {
   margin: 1rem;
 }
 
-/*------------
-    Tablet
-------------*/
+/*--  Tablet  --*/
 @media (min-width: 640px) {
-  .toolbar > *:first-of-type {
+  .sk-toolbar > *:first-of-type {
     margin-left: 0;
   }
 }

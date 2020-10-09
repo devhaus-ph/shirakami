@@ -4,38 +4,43 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 
 function Sidebar(props) {
-  const className = ['sidebar', props.className].join(' ').trim()
+  // Create sidebar visibility state
   const [visibility, setVisibility] = useState('')
-  const openSidebar = () => setVisibility('show')
+
+  // Create sidebar actions
+  const openSidebar = () => setVisibility('sk-sidebar-show')
   const closeSidebar = () => setVisibility('')
 
+  // Create sidebar mobile menu
   let sidebarMobileMenu = visibility ? (
-    <React.Fragment>
-      <Button variant="text">Logout</Button>
-      <Button onClick={closeSidebar} variant="text">
-        Close
-      </Button>
-    </React.Fragment>
+    <Button onClick={closeSidebar} variant="text">
+      Close
+    </Button>
   ) : (
     <Button onClick={openSidebar} variant="text">
       Menu
     </Button>
   )
 
+  // Build CSS classes
+  const styleName = ['sk-sidebar', props.className].join(' ').trim()
+
   return (
-    <aside className={className}>
-      <div className={`content ${visibility}`.trim()}>{props.children}</div>
-      <div className="mobile-menu">{sidebarMobileMenu}</div>
+    <aside className={styleName}>
+      <div className={`sk-sidebar-content ${visibility}`.trim()}>
+        {props.children}
+      </div>
+      <div className="sk-sidebar-mobile-menu">{sidebarMobileMenu}</div>
     </aside>
   )
 }
 
-/*----------------
-    Components
-----------------*/
+/*--  Sub Components  --*/
 Sidebar.Menu = props => {
-  const className = ['menu', props.className].join(' ').trim()
-  const label = props.label && <label className="label">{props.label}</label>
+  const className = ['sk-sidebar-menu', props.className].join(' ').trim()
+  const label = props.label && (
+    <label className="sk-sidebar-label">{props.label}</label>
+  )
 
   return (
     <dl className={className}>
@@ -45,17 +50,9 @@ Sidebar.Menu = props => {
   )
 }
 
-/*---------------
-    PropTypes
----------------*/
-Sidebar.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-}
+/*--  PropTypes  --*/
 
 Sidebar.Menu.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   label: PropTypes.string,
 }
 

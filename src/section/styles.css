@@ -1,21 +1,21 @@
 /*-------------
     Section
 -------------*/
-.section {
+.sk-section {
   padding-bottom: 1rem;
 }
 
-.section > .title {
+.sk-section-title {
   margin: 0;
   padding-bottom: 1rem;
 }
 
-.section > .item {
+.sk-section-item {
   padding-left: 1rem;
   padding-bottom: 1rem;
 }
 
-.section > .item > .label {
+.sk-section-label {
   display: block;
   color: var(--grey);
 }

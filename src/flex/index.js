@@ -3,15 +3,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Flex(props) {
-  const col = props.column && 'column'
-  const fullwidth = props.fullwidth && 'fullwidth'
-  const className = ['flex', col, fullwidth, props.className].join(' ').trim()
-  return <div className={className}>{props.children}</div>
+  // Separate HTML attribute props
+  const { children, className, column, fullwidth } = props
+
+  // Build CSS classes
+  const flexStyle = 'sk-flex'
+  const isColumn = column && 'sk-flex-column'
+  const isFullwidth = fullwidth && 'sk-flex-fullwidth'
+  let styleName = [flexStyle, isColumn, isFullwidth, className]
+  styleName = styleName.join(' ').trim()
+
+  return <div className={styleName}>{children}</div>
 }
 
 Flex.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
   column: PropTypes.bool,
   fullwidth: PropTypes.bool,
 }

@@ -1,11 +1,9 @@
-/*--------------
-    Dropdown
---------------*/
+/*--  Dropdown  --*/
 .dropdown {
   width: min-content;
 }
 
-.dropdown > .menu {
+.sk-dropdown-menu {
   position: absolute;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -19,13 +17,13 @@
   transition: all 100ms;
 }
 
-.dropdown > .menu.show {
+.sk-dropdown-menu-show {
   opacity: 100;
   transform: rotateX(0deg);
   transition: all 100ms;
 }
 
-.dropdown > .menu > .item {
+.sk-dropdown-item {
   margin: 0;
   padding: 0.5rem 1.5rem;
   font-size: 0.9rem;
@@ -34,7 +32,7 @@
   transition: all 200ms;
 }
 
-.dropdown > .menu > .item:hover {
+.sk-dropdown-item:hover {
   background-color: var(--blue-tint-1);
   transition: all 200ms;
 }

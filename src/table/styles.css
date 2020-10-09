@@ -1,84 +1,71 @@
-/*-----------
-    Table
------------*/
+/*--  Table  --*/
 .sk-table-container {
   overflow-x: auto;
+  display: block;
 }
 
-.table {
+.sk-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/*---------
-    Row
----------*/
-.table .row {
+/*--  Row  --*/
+.sk-table-row {
+  display: table-row;
   height: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: transparent;
 }
 
-/*------------
-    Header
-------------*/
-.table > .header {
-  border-bottom: 1px solid var(--grey);
-  color: var(--grey);
-  text-align: left;
+.sk-table-row:nth-child(even) {
+  background-color: var(--light);
 }
 
-.row > .headercell {
-  font-weight: 400;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.row > .headercell:first-of-type {
-  padding-left: 1rem;
-}
-
-.row > .headercell:last-child {
-  padding-right: 1rem;
-}
-
-/*----------
-    Body
-----------*/
-.table .body .row:hover {
+.sk-table-body > .sk-table-row:hover {
   background-color: var(--blue);
   cursor: pointer;
   transition: all 100ms ease;
 }
 
-.table .row:nth-child(even) {
-  background-color: var(--light);
+/*--  Header  --*/
+.sk-table-header {
+  display: table-header-group;
+  border-bottom: 1px solid var(--grey);
+  color: var(--grey);
+  text-align: left;
 }
 
-.row > .cell {
+.sk-table-header-cell {
+  font-weight: 400;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/*-----------
-    Props
------------*/
-.row > .cell.capitalize {
+.sk-table-header-cell:first-of-type {
+  padding-left: 1rem;
+}
+
+.sk-table-header-cell:last-child {
+  padding-right: 1rem;
+}
+
+/*--  Cell  --*/
+.sk-table-cell {
+  display: table-cell;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*--  Props  --*/
+.sk-table-th-capitalize {
   text-transform: capitalize;
 }
 
-.row > .cell.min-width {
-  width: 1%;
+.sk-table-th-min-width {
+  width: 0.1%;
 }
 
-.row > .cell:first-of-type {
-  padding-left: 1rem;
-}
-
-.row > .cell:last-child {
-  padding-right: 1rem;
-}
-
-.table .right {
+.sk-table-th-right {
   text-align: right;
 }

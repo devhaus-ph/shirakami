@@ -1,22 +1,21 @@
 import './styles.css'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Checkbox(props) {
-  const className = ['checkbox', props.className].join(' ').trim()
+  // Separate HTML attribute props
+  const { className, children, ...other } = props
+
+  // Build CSS classes
+  const checkboxStyle = 'sk-checkbox'
+  const styleName = [checkboxStyle, className].join(' ').trim()
 
   return (
-    <label className={className}>
-      <input className="input" type="checkbox" />
-      <p className="label">{props.children}</p>
-      <span className="mark" />
+    <label className={styleName}>
+      <input className="sk-checkbox-input" type="checkbox" {...other} />
+      <p className="sk-checkbox-label">{props.children}</p>
+      <span className="sk-checkbox-mark" />
     </label>
   )
-}
-
-Checkbox.propTypes = {
-  children: PropTypes.string.isRequired,
-  className: PropTypes.string,
 }
 
 export default Checkbox

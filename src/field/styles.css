@@ -1,18 +1,16 @@
-/*-----------
-    Field
------------*/
-.field {
+/*--  Field  --*/
+.sk-field {
   margin-bottom: 0.75rem;
 }
 
-.field > .label {
+.sk-field-label {
   display: block;
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
   color: var(--grey-shade-2);
 }
 
-.field > .message {
+.sk-field-message {
   display: block;
   margin-top: 0.25rem;
   font-size: 0.85rem;

@@ -8,7 +8,7 @@ export default {
 
 export const basic = () => (
   <Dropdown>
-    <Dropdown.Item>Option One</Dropdown.Item>
+    <Dropdown.Item onClick={() => alert('ahoy!')}>Option One</Dropdown.Item>
     <Dropdown.Item>Option Two</Dropdown.Item>
     <Dropdown.Item>Option Three</Dropdown.Item>
   </Dropdown>

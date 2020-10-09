@@ -6,43 +6,52 @@ export default {
   component: Form,
 }
 
-export const basic = () => (
-  <Form title="User Form" description="Create new user.">
-    <Form.Section title="Personal Details">
-      <Form.Row>
-        <Field label="Name">
-          <Input />
-        </Field>
-        <Field label="Birthday">
-          <Input type="date" />
-        </Field>
-      </Form.Row>
-      <Form.Row>
-        <Field label="Name">
-          <Input />
-        </Field>
-        <Field label="Birthday">
-          <Select>
-            <Select.Option>asdasdasdasdasdasd</Select.Option>
-            <Select.Option>a</Select.Option>
-            <Select.Option>b</Select.Option>
-          </Select>
-        </Field>
-      </Form.Row>
-    </Form.Section>
+export const basic = () => {
+  function submitForm(e) {
+    e.preventDefault()
+    alert('ahoy!')
+  }
 
-    <Form.Section title="Account Details">
-      <Field label="Email">
-        <Input type="email" />
-      </Field>
-      <Field label="Password">
-        <Input type="password" />
-      </Field>
-    </Form.Section>
+  return (
+    <Form
+      title="User Form"
+      description="Create new user."
+      onSubmit={submitForm}>
+      <Form.Section title="Personal Details">
+        <Form.Row>
+          <Field label="Name">
+            <Input />
+          </Field>
+          <Field label="Birthday">
+            <Input type="date" />
+          </Field>
+        </Form.Row>
+        <Form.Row>
+          <Field label="Office">
+            <Input />
+          </Field>
+          <Field label="Status">
+            <Select>
+              <Select.Option>Active</Select.Option>
+              <Select.Option>Inactive</Select.Option>
+            </Select>
+          </Field>
+        </Form.Row>
+      </Form.Section>
 
-    <Form.Footer>
-      <Button>Submit</Button>
-      <Button variant="text">Cancel</Button>
-    </Form.Footer>
-  </Form>
-)
+      <Form.Section title="Account Details">
+        <Field label="Email">
+          <Input type="email" />
+        </Field>
+        <Field label="Password">
+          <Input type="password" />
+        </Field>
+      </Form.Section>
+
+      <Form.Footer>
+        <Button>Submit</Button>
+        <Button variant="text">Cancel</Button>
+      </Form.Footer>
+    </Form>
+  )
+}

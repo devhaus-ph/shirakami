@@ -6,4 +6,10 @@ export default {
   component: Pagination,
 }
 
-export const basic = () => <Pagination activePage={1} totalPages={10} />
+export const basic = () => {
+  function navigate(data) {
+    alert('Page number: ' + data)
+  }
+
+  return <Pagination activePage={6} totalPages={10} onClick={navigate} />
+}

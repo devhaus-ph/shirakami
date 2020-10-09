@@ -2,14 +2,21 @@ import './styles.css'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Pagination({ activePage, totalPages }) {
+function Pagination(props) {
+  const { activePage, totalPages } = props
   const remainingPage = totalPages - activePage
-  const renderActive = <a className="item active">{activePage}</a>
-  const renderHidden = <div className="hidden"></div>
-  const renderEllipsis = <a className="ellipsis">...</a>
+
+  // Create pagination contents
+  const renderActive = <a className="sk-pagination-item active">{activePage}</a>
+  const renderHidden = <div className="sk-pagination-hidden"></div>
+  const renderEllipsis = <a className="sk-pagination-ellipsis">...</a>
 
   function renderItem(children) {
-    return <a className="item">{children}</a>
+    return (
+      <a className="sk-pagination-item" onClick={() => props.onClick(children)}>
+        {children}
+      </a>
+    )
   }
 
   const first = () => {
@@ -54,7 +61,7 @@ function Pagination({ activePage, totalPages }) {
   }
 
   return (
-    <div className="pagination">
+    <div className="sk-pagination">
       {first()}
       {firstToPrevious()}
       {previous()}

@@ -1,6 +1,4 @@
-/*----------
-    Form
-----------*/
+/*--  Form  --*/
 .sk-form {
   width: max-content;
 }
@@ -20,13 +18,13 @@
   margin-bottom: 2rem;
 }
 
-.sk-form-section-row {
+.sk-form-row {
   max-width: 80vw;
   display: flex;
   flex-wrap: wrap;
 }
 
-.sk-form-section-row > * {
+.sk-form-row > * {
   margin-right: 1rem;
 }
 
