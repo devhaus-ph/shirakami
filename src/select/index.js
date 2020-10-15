@@ -1,35 +1,32 @@
 import './styles.css'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Select(props) {
+  // Separate HTML attribute props
+  const { className, children, ...other } = props
+
+  // Build CSS classes
+  const styleName = ['sk-select', className].join(' ').trim()
+
   return (
-    <div className="sk-select">
-      <select className="sk-select-input">{props.children}</select>
+    <div className={styleName}>
+      <select className="sk-select-input" {...other}>
+        {children}
+      </select>
     </div>
   )
 }
 
-/*-------------------
-    Sub Component
--------------------*/
-Select.Option = props => (
-  <option disabled={props.disabled} value={props.value}>
-    {props.children}
-  </option>
-)
+//--  Sub Component  --//
+Select.Option = props => {
+  // Separate HTML attribute props
+  const { className, children, ...other } = props
 
-/*----------------
-    Prop Types
-----------------*/
-Select.propTypes = {
-  children: PropTypes.node,
-}
-
-Select.Option.propTypes = {
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  return (
+    <option className={className} {...other}>
+      {children}
+    </option>
+  )
 }
 
 export default Select
