@@ -1,19 +1,28 @@
 /*--  Sidebar  --*/
 .sk-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   margin: 0;
   padding: 4rem 0rem;
+  background-color: white;
+  scrollbar-color: var(--grey-tint-3) var(--light);
+  scrollbar-width: thin;
+  overflow-y: auto;
   z-index: 10;
 }
 
 /*--  Content  --*/
 .sk-sidebar-content {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 4rem 1rem 4rem 1rem;
+  bottom: 0;
+  padding: 2rem 1rem 4rem 1rem;
   background-color: rgba(255, 255, 255, 95%);
+  overflow-y: auto;
 }
 
 .sk-sidebar-show {
@@ -74,18 +83,19 @@
   background-color: rgba(255, 255, 255, 95%);
 }
 
-/*--  Tablet  --*/
-@media (min-width: 640px) {
+/*--  Desktop  --*/
+@media (min-width: 1024) {
   .sk-sidebar {
     width: 230px;
     min-width: 230px;
+    padding-top: 2rem;
     padding-right: 1rem;
     padding-left: 1rem;
   }
 
   .sk-sidebar-content {
     display: block;
-    position: static;
+    position: relative;
     padding: 0;
   }
 
