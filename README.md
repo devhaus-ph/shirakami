@@ -1,14 +1,14 @@
-# ☁️ Shirakami
+# Shirakami
 
 Shirakami is a minimalist CSS framework. Set of fast and clean [react](https://reactjs.org/) components.
 
-## 📦 Install
+## Install
 
 ```bash
 npm install shirakami-ui
 ```
 
-## 🔨 Usage
+## Usage
 
 ```javascript
 // index.js
@@ -33,6 +33,6 @@ function App() {
 export default App
 ```
 
-## 📝 License
+## License
 
 Code released under [MIT](https://github.com/devhaus-ph/shirakami/blob/master/LICENSE) license.
