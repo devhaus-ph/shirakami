@@ -84,7 +84,7 @@
 }
 
 /*--  Desktop  --*/
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   .sk-sidebar {
     width: 230px;
     min-width: 230px;
