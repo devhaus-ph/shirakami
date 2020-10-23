@@ -2,6 +2,8 @@
 .sk-table-container {
   overflow-x: auto;
   display: block;
+  margin: 2rem 0;
+  white-space: nowrap;
 }
 
 .sk-table {
