@@ -5,9 +5,7 @@
   "source": "src/index.js",
   "main": "dist/shirakami.js",
   "module": "dist/shirakami.esm.js",
-  "dependencies": {
-    "sanitize.css": "^11.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@storybook/addon-docs": "^5.3.19",
