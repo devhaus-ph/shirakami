@@ -13,8 +13,10 @@ export const chevronRight = () => <Icon icon="chevron-right" />
 export const close = () => <Icon icon="close" />
 export const download = () => <Icon icon="download" />
 export const edit = () => <Icon icon="edit" />
+export const female = () => <Icon icon="female" />
 export const filter = () => <Icon icon="filter" />
 export const gear = () => <Icon icon="gear" />
+export const male = () => <Icon icon="male" />
 export const moreVertical = () => <Icon icon="more-vertical" />
 export const plus = () => <Icon icon="plus" />
 export const power = () => <Icon icon="power" />

@@ -7,8 +7,10 @@ import ChevronRight from './_chevron-right'
 import Close from './_close'
 import Download from './_download'
 import Edit from './_edit'
+import Female from './_female'
 import Filter from './_filter'
 import Gear from './_gear'
+import Male from './_male'
 import MoreVertical from './_more-vertical'
 import Plus from './_plus'
 import Power from './_power'
@@ -26,8 +28,10 @@ function Icon(props) {
     'close': Close,
     'download': Download,
     'edit': Edit,
+    'female': Female,
     'filter': Filter,
     'gear': Gear,
+    'male': Male,
     'more-vertical': MoreVertical,
     'plus': Plus,
     'power': Power,
@@ -58,8 +62,10 @@ Icon.propTypes = {
     'close',
     'download',
     'edit',
+    'female',
     'filter',
     'gear',
+    'male',
     'more-vertical',
     'plus',
     'power',
