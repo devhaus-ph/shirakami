@@ -20,7 +20,10 @@ function Button(props) {
   const isTransparent = transparent && 'sk-button-transparent'
   const buttonVariant = 'sk-button-' + variant
   let styleName = [buttonStyle, buttonVariant, isTransparent, className]
-  styleName = styleName.join(' ').trim()
+  styleName = styleName
+    .filter(Boolean)
+    .join(' ')
+    .trim()
 
   // Create button icon
   let buttonIcon = <div className="sk-button-icon-hidden" />

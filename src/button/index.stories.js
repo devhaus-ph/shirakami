@@ -6,7 +6,7 @@ export default {
   component: Button,
 }
 
-export const basic = () => <Button>Button</Button>
+export const basic = () => <Button className={false}>Button</Button>
 
 export const variantSolid = () => <Button variant="solid">Button</Button>
 
@@ -19,3 +19,5 @@ export const variantIcon = () => <Button variant="icon" icon="user" />
 export const transparent = () => (
   <Button variant="icon" icon="user" transparent />
 )
+
+export const disabled = () => <Button disabled>Button</Button>
