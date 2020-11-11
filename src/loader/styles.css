@@ -1,0 +1,28 @@
+.sk-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.4rem;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    var(--blue-shade-1),
+    var(--light),
+    var(--blue-shade-1)
+  );
+  background-size: 400% 400%;
+  z-index: 1000;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
