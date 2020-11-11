@@ -10,7 +10,7 @@
 }
 
 .sk-checkbox-label {
-  margin-top: 0;
+  margin-top: 0.4rem;
   margin-bottom: 0.75rem;
   line-height: 1.4rem;
   color: var(--grey-shade-1);
@@ -25,7 +25,7 @@
 
 .sk-checkbox-mark {
   position: absolute;
-  top: 0;
+  top: 0.1rem;
   left: 0;
   width: 1.25rem;
   height: 1.25rem;
@@ -80,6 +80,7 @@
   content: '';
   display: none;
   position: absolute;
+  top: 0.1rem;
   left: 0.32rem;
   width: 0.5rem;
   height: 0.75rem;
