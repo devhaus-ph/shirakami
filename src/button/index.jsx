@@ -49,4 +49,6 @@ Button.defaultProps = {
   variant: 'solid',
 }
 
+Button.displayName = 'Shirakami Button'
+
 export default Button
