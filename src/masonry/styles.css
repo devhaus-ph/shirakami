@@ -1,0 +1,11 @@
+.sk-masonry {
+  columns: 5 250px;
+  column-gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.sk-masonry > * {
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
