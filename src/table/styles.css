@@ -1,22 +1,24 @@
 /*--  Table  --*/
 .sk-table-container {
-  overflow-x: auto;
   display: block;
   margin: 2rem 0;
+  overflow-x: auto;
+  user-select: none;
   white-space: nowrap;
 }
 
 .sk-table {
+  display: block;
   width: 100%;
   border-collapse: collapse;
 }
 
 /*--  Row  --*/
 .sk-table-row {
-  display: table-row;
-  height: 2rem;
-  margin: 0;
-  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 1rem 1rem;
   background-color: transparent;
 }
 
@@ -26,19 +28,21 @@
 
 .sk-table-body > .sk-table-row:hover {
   background-color: var(--blue);
-  cursor: pointer;
   transition: all 100ms ease;
+  cursor: pointer;
 }
 
 /*--  Header  --*/
 .sk-table-header {
-  display: table-header-group;
+  display: block;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--grey);
   color: var(--grey);
   text-align: left;
 }
 
 .sk-table-header-cell {
+  display: block;
   font-weight: 400;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -50,6 +54,12 @@
 
 .sk-table-header-cell:last-child {
   padding-right: 1rem;
+}
+
+/*-- Body --*/
+.sk-table-body {
+  display: block;
+  width: 100%;
 }
 
 /*--  Cell  --*/
@@ -69,5 +79,40 @@
 }
 
 .sk-table-th-right {
-  text-align: right;
+  text-align: left;
+}
+
+/*--  Tablet  --*/
+@media (min-width: 640px) {
+  .sk-table {
+    display: table;
+  }
+
+  .sk-table-header {
+    display: table-header-group;
+    height: 2rem;
+    padding-bottom: 0;
+  }
+
+  .sk-table-body {
+    display: table-row-group;
+  }
+
+  .sk-table-row {
+    display: table-row;
+    margin: 0;
+  }
+
+  .sk-table-header-cell {
+    display: table-cell;
+  }
+
+  .sk-table-cell {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sk-table-th-right {
+    text-align: right;
+  }
 }

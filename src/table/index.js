@@ -91,4 +91,11 @@ Table.Cell.propTypes = {
   textRight: PropTypes.bool,
 }
 
+/*------------------
+    Display Name
+------------------*/
+Table.displayName = 'Shirakami Table'
+Table.Row.displayName = 'Shirakami Table Row'
+Table.Cell.displayName = 'Shirakami Table Cell'
+
 export default Table
