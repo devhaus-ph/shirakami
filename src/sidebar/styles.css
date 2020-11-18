@@ -29,6 +29,11 @@
   display: block;
 }
 
+/*-- Sidebar Content Spacer --*/
+.sk-sidebar-content-spacer {
+  height: 4rem;
+}
+
 /*--  Menu  --*/
 .sk-sidebar-menu {
   margin: 0;
@@ -97,6 +102,10 @@
     display: block;
     position: relative;
     padding: 0;
+  }
+
+  .sk-sidebar-content-spacer {
+    height: 0;
   }
 
   .sk-sidebar-mobile-menu {

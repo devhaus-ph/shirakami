@@ -17,11 +17,22 @@ export const basic = () => (
       <Sidebar.Menu label="Social Profile">
         <a>Individuals</a>
         <a>Communities</a>
+        <a>Communities</a>
+        <a>Communities</a>
+        <a>Communities</a>
+        <a>Communities</a>
+        <a>Communities</a>
+        <a>Communities</a>
       </Sidebar.Menu>
 
       <Sidebar.Menu label="Others">
         <a>DRR Management</a>
         <a>Q-PHN Map</a>
+        <a>Q-PHN Map</a>
+        <a>Q-PHN Map</a>
+        <a>Q-PHN Map</a>
+        <a>Q-PHN Map</a>
+        <a>Q-PHN End</a>
       </Sidebar.Menu>
     </Sidebar>
     <div>Sample Content here</div>

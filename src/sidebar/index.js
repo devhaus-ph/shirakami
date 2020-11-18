@@ -29,6 +29,7 @@ function Sidebar(props) {
     <aside className={styleName}>
       <div className={`sk-sidebar-content ${visibility}`.trim()}>
         {props.children}
+        <div className="sk-sidebar-content-spacer" />
       </div>
       <div className="sk-sidebar-mobile-menu">{sidebarMobileMenu}</div>
     </aside>
