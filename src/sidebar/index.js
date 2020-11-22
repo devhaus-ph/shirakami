@@ -3,7 +3,13 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button'
 
-function Sidebar(props) {
+const Sidebar = React.forwardRef(function Sidebar(props, ref) {
+  React.useImperativeHandle(ref, () => ({
+    closeSidebar() {
+      closeSidebar()
+    },
+  }))
+
   // Create sidebar visibility state
   const [visibility, setVisibility] = useState('')
 
@@ -34,7 +40,7 @@ function Sidebar(props) {
       <div className="sk-sidebar-mobile-menu">{sidebarMobileMenu}</div>
     </aside>
   )
-}
+})
 
 /*--  Sub Components  --*/
 Sidebar.Menu = props => {

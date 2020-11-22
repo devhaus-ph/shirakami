@@ -6,35 +6,39 @@ export default {
   component: Sidebar,
 }
 
-export const basic = () => (
-  <Flex>
-    <Sidebar>
-      <Sidebar.Menu label="Menu">
-        <a className="active">Dashboard</a>
-        <a>Users</a>
-      </Sidebar.Menu>
+export const basic = () => {
+  const childRef = React.useRef()
+  return (
+    <Flex>
+      <Sidebar ref={childRef}>
+        <Sidebar.Menu label="Menu">
+          <a onClick={() => childRef.current.closeSidebar()}>Click</a>
+          <a className="active">Dashboard</a>
+          <a>Users</a>
+        </Sidebar.Menu>
 
-      <Sidebar.Menu label="Social Profile">
-        <a>Individuals</a>
-        <a>Communities</a>
-        <a>Communities</a>
-        <a>Communities</a>
-        <a>Communities</a>
-        <a>Communities</a>
-        <a>Communities</a>
-        <a>Communities</a>
-      </Sidebar.Menu>
+        <Sidebar.Menu label="Social Profile">
+          <a>Individuals</a>
+          <a>Communities</a>
+          <a>Communities</a>
+          <a>Communities</a>
+          <a>Communities</a>
+          <a>Communities</a>
+          <a>Communities</a>
+          <a>Communities</a>
+        </Sidebar.Menu>
 
-      <Sidebar.Menu label="Others">
-        <a>DRR Management</a>
-        <a>Q-PHN Map</a>
-        <a>Q-PHN Map</a>
-        <a>Q-PHN Map</a>
-        <a>Q-PHN Map</a>
-        <a>Q-PHN Map</a>
-        <a>Q-PHN End</a>
-      </Sidebar.Menu>
-    </Sidebar>
-    <div>Sample Content here</div>
-  </Flex>
-)
+        <Sidebar.Menu label="Others">
+          <a>DRR Management</a>
+          <a>Q-PHN Map</a>
+          <a>Q-PHN Map</a>
+          <a>Q-PHN Map</a>
+          <a>Q-PHN Map</a>
+          <a>Q-PHN Map</a>
+          <a>Q-PHN End</a>
+        </Sidebar.Menu>
+      </Sidebar>
+      <div>Sample Content here</div>
+    </Flex>
+  )
+}
