@@ -58,9 +58,12 @@ Sidebar.Menu = props => {
 }
 
 /*--  PropTypes  --*/
-
 Sidebar.Menu.propTypes = {
   label: PropTypes.string,
 }
+
+/*-- Display Names --*/
+Sidebar.displayName = 'Shirakami Sidebar'
+Sidebar.Menu.displayName = 'Shirakami Sidebar Menu'
 
 export default Sidebar
