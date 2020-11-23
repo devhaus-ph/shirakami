@@ -7,12 +7,10 @@ export default {
 }
 
 export const basic = () => {
-  const childRef = React.useRef()
   return (
     <Flex>
-      <Sidebar ref={childRef}>
+      <Sidebar>
         <Sidebar.Menu label="Menu">
-          <a onClick={() => childRef.current.closeSidebar()}>Click</a>
           <a className="active">Dashboard</a>
           <a>Users</a>
         </Sidebar.Menu>
