@@ -14,6 +14,12 @@ function Section(props) {
 }
 
 /*--  Sub Component  --*/
+Section.Row = props => {
+  // Build CSS classes
+  const styleName = ['sk-section-row', props.className].join(' ').trim()
+  return <div className={styleName}>{props.children}</div>
+}
+
 Section.Item = props => {
   // Build CSS classes
   const styleName = ['sk-section-item', props.className].join(' ').trim()

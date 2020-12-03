@@ -31,3 +31,21 @@
   display: block;
   color: var(--grey);
 }
+
+.sk-section-row {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+/*--  Desktop  --*/
+@media (min-width: 1024px) {
+  .sk-section-row {
+    flex-direction: row;
+  }
+
+  .sk-section-row > * {
+    border: 1px solid var(--grey-tint-1);
+    margin: 0.5rem;
+  }
+}
