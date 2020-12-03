@@ -8,6 +8,6 @@ export default {
 
 export const basic = () => (
   <div>
-    <Input />
+    <Input pattern="[0-9]" number />
   </div>
 )
