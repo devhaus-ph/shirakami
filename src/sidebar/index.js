@@ -29,7 +29,6 @@ function Sidebar(props) {
     <aside className={styleName}>
       <div
         onClick={closeSidebar}
-        onTouchEnd={closeSidebar}
         className={`sk-sidebar-content ${visibility}`.trim()}>
         {props.children}
         <div className="sk-sidebar-content-spacer" />
