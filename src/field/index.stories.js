@@ -17,3 +17,9 @@ export const withMessage = () => (
     <Input type="date" />
   </Field>
 )
+
+export const isRequired = () => (
+  <Field label="Birthday" message="This field is required" required>
+    <Input type="date" />
+  </Field>
+)

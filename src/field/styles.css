@@ -16,3 +16,8 @@
   font-size: 0.85rem;
   color: var(--red-shade-1);
 }
+
+.sk-field-required {
+  color: var(--red-shade-1);
+  font-size: 1rem;
+}

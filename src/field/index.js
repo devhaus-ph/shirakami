@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function Field(props) {
   // Separate HTML attribute props
-  const { children, className, label, message, ...other } = props
+  const { children, className, label, message, required, ...other } = props
 
   // Build CSS classes
   const fieldStyle = 'sk-field'
@@ -12,7 +12,10 @@ function Field(props) {
 
   return (
     <div className={styleName} {...other}>
-      <label className="sk-field-label">{label}</label>
+      <label className="sk-field-label">
+        {label}
+        <span className="sk-field-required">{required ? '*' : ''}</span>
+      </label>
       {children}
       <label className="sk-field-message">{message}</label>
     </div>
