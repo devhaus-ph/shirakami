@@ -8,11 +8,11 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.4",
-    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-docs": "^6.5.15",
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
-    "microbundle": "^0.12.2",
+    "microbundle": "^0.15.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
